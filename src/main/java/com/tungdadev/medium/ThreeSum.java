@@ -1,7 +1,14 @@
 package com.tungdadev.medium;
 
-/**
- * @author TungDaDev
- * @since 18/12/2024 - 10:26
- */public class ThreeSum {
+/*
+ * Link: https://leetcode.com/problems/3sum/
+ * Given an integer array nums
+ * return all the triplets [nums[i], nums[j], nums[k]]
+ * such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+ * Notice that the solution set must not contain duplicate triplets.
+ */
+public class ThreeSum {
+    public static void main(String[] args) {
+
+    }
 }
