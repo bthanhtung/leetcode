@@ -16,8 +16,8 @@ public class _4Sum {
      * Just to test
      */
     public static void main(String[] args) {
-        int[] nums = {1, 0, -1, 0, -2, 2};
-        int target = 0;
+        int[] nums = {1000000000,1000000000,1000000000,1000000000};
+        int target = -294967296;
 
         List<List<Integer>> result = fourSum(nums, target);
 
