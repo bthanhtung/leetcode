@@ -20,19 +20,12 @@ public class LongestSubsequenceSubstring {
         }
 
         // Fill all the remaining rows
-        for (int i = 1;
-             i < n + 1; i++) {
-
-            for (int j = 1;
-                 j < m + 1; j++) {
-
+        for (int i = 1; i < n + 1; i++) {
+            for (int j = 1; j < m + 1; j++) {
                 // If the characters are equal
-                if (X.charAt(i - 1)
-                        == Y.charAt(j - 1)) {
-                    mat[i][j] = 1
-                            + mat[i - 1][j - 1];
+                if (X.charAt(i - 1) == Y.charAt(j - 1)) {
+                    mat[i][j] = 1 + mat[i - 1][j - 1];
                 }
-
                 // If not equal, then
                 // just move to next
                 // in subsequence string
@@ -50,7 +43,6 @@ public class LongestSubsequenceSubstring {
         // Iterate through the last
         // row of matrix
         for (int i = 0; i < m + 1; i++) {
-
             if (mat[n][i] > len) {
                 len = mat[n][i];
                 col = i;
@@ -64,12 +56,9 @@ public class LongestSubsequenceSubstring {
 
         // Backtrack from the cell
         while (len > 0) {
-
             // If equal, then add the
             // character to res string
-            if (X.charAt(i - 1)
-                    == Y.charAt(j - 1)) {
-
+            if (X.charAt(i - 1) == Y.charAt(j - 1)) {
                 res = X.charAt(i - 1) + res;
                 i--;
                 j--;
