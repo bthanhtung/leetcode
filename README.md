@@ -41,7 +41,7 @@ easy/ medium/ hard/
     ├── README.md        statement, idea, diagrams, every approach explained, pitfalls, related problems
     ├── TwoSum.java      one method per approach, main() to try it
     └── TwoSumTest.java  JUnit 5 tests
-src/main/java/com/tungdadev/common/   ListNode, TreeNode shared by linked-list and tree problems
+common/                               ListNode, TreeNode shared by linked-list and tree problems
 scripts/                              problem list (problems.json) and the index generator
 ```
 
