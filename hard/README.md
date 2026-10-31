@@ -1,4 +1,4 @@
-# Hard — 13 / 115 solved
+# Hard — 23 / 115 solved
 
 Ordered from easiest to hardest (by LeetCode acceptance rate). Each solved problem has its own folder with
 the statement, a detailed explanation with diagrams (`README.md`), several approaches (`*.java`) and tests.
@@ -16,16 +16,16 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 | 9 | 1579 | [Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/) [↗](https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) | Union-Find, Graph Theory | 70.1% | ✅ Union-find, shared edges first |
 | 10 | 992 | [Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/) [↗](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Array, Hash Table, Sliding Window, Counting | 69.2% | ✅ Brute force with a set · atMost(k) - atMost(k - 1) with sliding windows |
 | 11 | 42 | [Trapping Rain Water](TrappingRainWater/) [↗](https://leetcode.com/problems/trapping-rain-water/) | Array, Two Pointers, Dynamic Programming, Stack | 68.5% | ✅ Brute force · Prefix max · Monotonic stack · Two pointers |
-| 12 | 778 | Swim in Rising Water [↗](https://leetcode.com/problems/swim-in-rising-water/) | Array, Binary Search, Depth-First Search, Breadth-First Search | 68.4% | ⏳ |
-| 13 | 1406 | Stone Game III [↗](https://leetcode.com/problems/stone-game-iii/) | Array, Math, Dynamic Programming, Minimax | 68.0% | ⏳ |
-| 14 | 25 | Reverse Nodes in k-Group [↗](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List, Recursion | 67.6% | ⏳ |
-| 15 | 2050 | Parallel Courses III [↗](https://leetcode.com/problems/parallel-courses-iii/) | Array, Dynamic Programming, Graph Theory, Topological Sort | 66.8% | ⏳ |
-| 16 | 847 | Shortest Path Visiting All Nodes [↗](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph Theory | 66.6% | ⏳ |
-| 17 | 37 | Sudoku Solver [↗](https://leetcode.com/problems/sudoku-solver/) | Array, Hash Table, Backtracking, Matrix | 65.6% | ⏳ |
-| 18 | 726 | Number of Atoms [↗](https://leetcode.com/problems/number-of-atoms/) | Hash Table, String, Stack, Sorting | 65.3% | ⏳ |
-| 19 | 312 | Burst Balloons [↗](https://leetcode.com/problems/burst-balloons/) | Array, Dynamic Programming | 64.6% | ⏳ |
-| 20 | 407 | Trapping Rain Water II [↗](https://leetcode.com/problems/trapping-rain-water-ii/) | Array, Breadth-First Search, Heap (Priority Queue), Matrix | 64.3% | ⏳ |
-| 21 | 857 | Minimum Cost to Hire K Workers [↗](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) | Array, Greedy, Sorting, Heap (Priority Queue) | 63.9% | ⏳ |
+| 12 | 778 | [Swim in Rising Water](SwimInRisingWater/) [↗](https://leetcode.com/problems/swim-in-rising-water/) | Array, Binary Search, Depth-First Search, Breadth-First Search | 68.4% | ✅ Dijkstra on the max height · Binary search + BFS · Union-find in height order |
+| 13 | 1406 | [Stone Game III](StoneGameIII/) [↗](https://leetcode.com/problems/stone-game-iii/) | Array, Math, Dynamic Programming, Minimax | 68.0% | ✅ Memoized minimax on score difference · Bottom-up DP from the end |
+| 14 | 25 | [Reverse Nodes in k-Group](ReverseNodesInKGroup/) [↗](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List, Recursion | 67.6% | ✅ Iterative group reversal with dummy · Recursive |
+| 15 | 2050 | [Parallel Courses III](ParallelCoursesIII/) [↗](https://leetcode.com/problems/parallel-courses-iii/) | Array, Dynamic Programming, Graph Theory, Topological Sort | 66.8% | ✅ Topological order (Kahn) with earliest finish times · DFS with memo on finish time |
+| 16 | 847 | [Shortest Path Visiting All Nodes](ShortestPathVisitingAllNodes/) [↗](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph Theory | 66.6% | ✅ BFS over (node, visited mask) · Floyd-Warshall + bitmask DP (TSP) |
+| 17 | 37 | [Sudoku Solver](SudokuSolver/) [↗](https://leetcode.com/problems/sudoku-solver/) | Array, Hash Table, Backtracking, Matrix | 65.6% | ✅ Backtracking cell by cell · Backtracking with bitmasks and the most constrained cell first |
+| 18 | 726 | [Number of Atoms](NumberOfAtoms/) [↗](https://leetcode.com/problems/number-of-atoms/) | Hash Table, String, Stack, Sorting | 65.3% | ✅ Stack of count maps · Recursive descent parser |
+| 19 | 312 | [Burst Balloons](BurstBalloons/) [↗](https://leetcode.com/problems/burst-balloons/) | Array, Dynamic Programming | 64.6% | ✅ Interval DP choosing the last balloon · Memoized recursion |
+| 20 | 407 | [Trapping Rain Water II](TrappingRainWaterII/) [↗](https://leetcode.com/problems/trapping-rain-water-ii/) | Array, Breadth-First Search, Heap (Priority Queue), Matrix | 64.3% | ✅ Min-heap flood from the border (Dijkstra-like) · Iterative relaxation |
+| 21 | 857 | [Minimum Cost to Hire K Workers](MinimumCostToHireKWorkers/) [↗](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) | Array, Greedy, Sorting, Heap (Priority Queue) | 63.9% | ✅ Try every captain ratio · Sort by ratio + max-heap of qualities |
 | 22 | 1547 | Minimum Cost to Cut a Stick [↗](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/) | Array, Dynamic Programming, Sorting | 63.5% | ⏳ |
 | 23 | 995 | Minimum Number of K Consecutive Bit Flips [↗](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/) | Array, Bit Manipulation, Queue, Sliding Window | 62.5% | ⏳ |
 | 24 | 1092 | Shortest Common Supersequence  [↗](https://leetcode.com/problems/shortest-common-supersequence/) | String, Dynamic Programming, Longest Common Subsequence | 62.4% | ⏳ |
@@ -124,20 +124,26 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 ## By topic
 
 - **Algorithm X** (2): [52. N-Queens II](NQueensII/) · [51. N-Queens](NQueens/)
-- **Array** (8): [980. Unique Paths III](UniquePathsIII/) · [51. N-Queens](NQueens/) · [773. Sliding Puzzle](SlidingPuzzle/) · [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) · [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/) · [42. Trapping Rain Water](TrappingRainWater/) · [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
-- **Backtracking** (4): [980. Unique Paths III](UniquePathsIII/) · [52. N-Queens II](NQueensII/) · [51. N-Queens](NQueens/) · [773. Sliding Puzzle](SlidingPuzzle/)
-- **Binary Search** (1): [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
-- **Bit Manipulation** (1): [980. Unique Paths III](UniquePathsIII/)
-- **Depth-First Search** (1): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/)
+- **Array** (15): [980. Unique Paths III](UniquePathsIII/) · [51. N-Queens](NQueens/) · [773. Sliding Puzzle](SlidingPuzzle/) · [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) · [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/) · [42. Trapping Rain Water](TrappingRainWater/) · [778. Swim in Rising Water](SwimInRisingWater/) · [1406. Stone Game III](StoneGameIII/) · [2050. Parallel Courses III](ParallelCoursesIII/) · [37. Sudoku Solver](SudokuSolver/) · [312. Burst Balloons](BurstBalloons/) · [407. Trapping Rain Water II](TrappingRainWaterII/) · [857. Minimum Cost to Hire K Workers](MinimumCostToHireKWorkers/) · [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
+- **Backtracking** (5): [980. Unique Paths III](UniquePathsIII/) · [52. N-Queens II](NQueensII/) · [51. N-Queens](NQueens/) · [773. Sliding Puzzle](SlidingPuzzle/) · [37. Sudoku Solver](SudokuSolver/)
+- **Binary Search** (2): [778. Swim in Rising Water](SwimInRisingWater/) · [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
+- **Bit Manipulation** (2): [980. Unique Paths III](UniquePathsIII/) · [847. Shortest Path Visiting All Nodes](ShortestPathVisitingAllNodes/)
+- **Breadth-First Search** (2): [847. Shortest Path Visiting All Nodes](ShortestPathVisitingAllNodes/) · [407. Trapping Rain Water II](TrappingRainWaterII/)
+- **Depth-First Search** (2): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/) · [778. Swim in Rising Water](SwimInRisingWater/)
 - **Divide and Conquer** (1): [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
-- **Dynamic Programming** (4): [773. Sliding Puzzle](SlidingPuzzle/) · [1312. Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) · [42. Trapping Rain Water](TrappingRainWater/) · [10. Regular Expression Matching](RegularExpressionMatching/)
-- **Graph Theory** (1): [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/)
-- **Greedy** (1): [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/)
-- **Hash Table** (3): [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) · [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/)
+- **Dynamic Programming** (8): [773. Sliding Puzzle](SlidingPuzzle/) · [1312. Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) · [42. Trapping Rain Water](TrappingRainWater/) · [1406. Stone Game III](StoneGameIII/) · [2050. Parallel Courses III](ParallelCoursesIII/) · [847. Shortest Path Visiting All Nodes](ShortestPathVisitingAllNodes/) · [312. Burst Balloons](BurstBalloons/) · [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Graph Theory** (2): [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/) · [2050. Parallel Courses III](ParallelCoursesIII/)
+- **Greedy** (2): [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [857. Minimum Cost to Hire K Workers](MinimumCostToHireKWorkers/)
+- **Hash Table** (5): [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) · [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/) · [37. Sudoku Solver](SudokuSolver/) · [726. Number of Atoms](NumberOfAtoms/)
+- **Heap (Priority Queue)** (1): [407. Trapping Rain Water II](TrappingRainWaterII/)
+- **Linked List** (1): [25. Reverse Nodes in k-Group](ReverseNodesInKGroup/)
+- **Math** (1): [1406. Stone Game III](StoneGameIII/)
 - **Matrix** (1): [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/)
-- **Recursion** (1): [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Recursion** (2): [25. Reverse Nodes in k-Group](ReverseNodesInKGroup/) · [10. Regular Expression Matching](RegularExpressionMatching/)
 - **Sliding Window** (1): [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/)
-- **String** (3): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/) · [1312. Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) · [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Sorting** (1): [857. Minimum Cost to Hire K Workers](MinimumCostToHireKWorkers/)
+- **Stack** (1): [726. Number of Atoms](NumberOfAtoms/)
+- **String** (4): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/) · [1312. Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) · [726. Number of Atoms](NumberOfAtoms/) · [10. Regular Expression Matching](RegularExpressionMatching/)
 - **Tree** (1): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/)
 - **Two Pointers** (1): [42. Trapping Rain Water](TrappingRainWater/)
 - **Union-Find** (1): [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/)
