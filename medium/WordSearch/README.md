@@ -42,4 +42,4 @@ flowchart TD
 
 ## Bài liên quan
 
-212 Word Search II (nhiều từ — Trie) · 79 → 200 Number of Islands · 980 Unique Paths III.
+212 Word Search II (nhiều từ — Trie) · 200 Number of Islands · 980 Unique Paths III.
