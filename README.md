@@ -6,6 +6,19 @@ Interview-focused LeetCode problems, ordered from easiest to hardest inside each
 - **a detailed explanation** (Vietnamese) with Mermaid diagrams, hand-traced tables, common pitfalls and follow-up questions;
 - **tests** — the official examples, edge cases, and every approach cross-checked on random inputs.
 
+## Visualizer
+
+`site/` is a static site that shows every problem (statement, idea, approaches, Java code) and plays step-by-step
+animations for the classic ones. Netlify builds it with `python3 site/build.py` (see `netlify.toml`).
+
+```bash
+python3 site/build.py && python3 -m http.server -d site 8000   # http://localhost:8000
+node site/test-viz.mjs                                          # every animation reaches the expected answer
+```
+
+To animate another problem, register it in `site/assets/viz-array.js` or `viz-structures.js` with a default input and
+the expected result.
+
 ## Progress
 
 <!-- progress:start -->
