@@ -1,4 +1,4 @@
-# Medium — 22 / 142 solved
+# Medium — 32 / 142 solved
 
 Ordered from easiest to hardest (by LeetCode acceptance rate). Each solved problem has its own folder with
 the statement, a detailed explanation with diagrams (`README.md`), several approaches (`*.java`) and tests.
@@ -15,18 +15,18 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 | 8 | 173 | [Binary Search Tree Iterator](BinarySearchTreeIterator/) [↗](https://leetcode.com/problems/binary-search-tree-iterator/) | Stack, Tree, Design, Binary Search Tree | 77.1% | ✅ Flatten with inorder · Controlled recursion with a stack |
 | 9 | 59 | [Spiral Matrix II](SpiralMatrixII/) [↗](https://leetcode.com/problems/spiral-matrix-ii/) | Array, Matrix, Simulation | 76.1% | ✅ Shrinking boundaries · Direction vectors |
 | 10 | 77 | [Combinations](Combinations/) [↗](https://leetcode.com/problems/combinations/) | Backtracking | 75.4% | ✅ Backtracking · Backtracking with pruning · Iterative (lexicographic) |
-| 11 | 131 | Palindrome Partitioning [↗](https://leetcode.com/problems/palindrome-partitioning/) | String, Dynamic Programming, Backtracking | 74.8% | ⏳ |
-| 12 | 695 | Max Area of Island [↗](https://leetcode.com/problems/max-area-of-island/) | Array, Depth-First Search, Breadth-First Search, Union-Find | 74.3% | ⏳ |
-| 13 | 102 | Binary Tree Level Order Traversal [↗](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Tree, Breadth-First Search, Binary Tree | 73.7% | ⏳ |
+| 11 | 131 | [Palindrome Partitioning](PalindromePartitioning/) [↗](https://leetcode.com/problems/palindrome-partitioning/) | String, Dynamic Programming, Backtracking | 74.8% | ✅ Backtracking with palindrome check · Backtracking with precomputed DP table |
+| 12 | 695 | [Max Area of Island](MaxAreaOfIsland/) [↗](https://leetcode.com/problems/max-area-of-island/) | Array, Depth-First Search, Breadth-First Search, Union-Find | 74.3% | ✅ Recursive DFS · Iterative BFS · Union-find |
+| 13 | 102 | [Binary Tree Level Order Traversal](BinaryTreeLevelOrderTraversal/) [↗](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Tree, Breadth-First Search, Binary Tree | 73.7% | ✅ BFS by levels · DFS with depth |
 | 14 | 49 | [Group Anagrams](GroupAnagrams/) [↗](https://leetcode.com/problems/group-anagrams/) | Array, Hash Table, String, Sorting | 73.5% | ✅ Sorted-letters key · Letter-count key |
-| 15 | 647 | Palindromic Substrings [↗](https://leetcode.com/problems/palindromic-substrings/) | Two Pointers, String, Dynamic Programming | 73.4% | ⏳ |
-| 16 | 289 | Game of Life [↗](https://leetcode.com/problems/game-of-life/) | Array, Matrix, Simulation | 73.2% | ⏳ |
-| 17 | 222 | Count Complete Tree Nodes [↗](https://leetcode.com/problems/count-complete-tree-nodes/) | Binary Search, Bit Manipulation, Tree, Binary Tree | 72.0% | ⏳ |
+| 15 | 647 | [Palindromic Substrings](PalindromicSubstrings/) [↗](https://leetcode.com/problems/palindromic-substrings/) | Two Pointers, String, Dynamic Programming | 73.4% | ✅ Brute force · Expand around centers · DP table |
+| 16 | 289 | [Game of Life](GameOfLife/) [↗](https://leetcode.com/problems/game-of-life/) | Array, Matrix, Simulation | 73.2% | ✅ Copy of the board · In place with two-bit states |
+| 17 | 222 | [Count Complete Tree Nodes](CountCompleteTreeNodes/) [↗](https://leetcode.com/problems/count-complete-tree-nodes/) | Binary Search, Bit Manipulation, Tree, Binary Tree | 72.0% | ✅ Count every node · Compare left/right heights · Binary search on the last level |
 | 18 | 12 | [Integer to Roman](IntegerToRoman/) [↗](https://leetcode.com/problems/integer-to-roman/) | Hash Table, Math, String | 71.9% | ✅ Greedy value table · Per-digit tables |
-| 19 | 122 | Best Time to Buy and Sell Stock II [↗](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Array, Dynamic Programming, Greedy | 71.8% | ⏳ |
-| 20 | 114 | Flatten Binary Tree to Linked List [↗](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | Linked List, Stack, Tree, Depth-First Search | 71.7% | ⏳ |
-| 21 | 235 | Lowest Common Ancestor of a Binary Search Tree [↗](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 71.6% | ⏳ |
-| 22 | 199 | Binary Tree Right Side View [↗](https://leetcode.com/problems/binary-tree-right-side-view/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 71.5% | ⏳ |
+| 19 | 122 | [Best Time to Buy and Sell Stock II](BestTimeToBuyAndSellStockII/) [↗](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Array, Dynamic Programming, Greedy | 71.8% | ✅ Sum of every rise (greedy) · Valley/peak · State-machine DP |
+| 20 | 114 | [Flatten Binary Tree to Linked List](FlattenBinaryTreeToLinkedList/) [↗](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | Linked List, Stack, Tree, Depth-First Search | 71.7% | ✅ Preorder into a list · Reverse postorder with prev · Morris-style in place |
+| 21 | 235 | [Lowest Common Ancestor of a Binary Search Tree](LowestCommonAncestorOfABinarySearchTree/) [↗](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 71.6% | ✅ Recursive using BST order · Iterative |
+| 22 | 199 | [Binary Tree Right Side View](BinaryTreeRightSideView/) [↗](https://leetcode.com/problems/binary-tree-right-side-view/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 71.5% | ✅ BFS taking the last of each level · DFS right-first |
 | 23 | 24 | Swap Nodes in Pairs [↗](https://leetcode.com/problems/swap-nodes-in-pairs/) | Linked List, Recursion | 70.5% | ⏳ |
 | 24 | 129 | Sum Root to Leaf Numbers [↗](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | Tree, Depth-First Search, Binary Tree | 70.5% | ⏳ |
 | 25 | 75 | Sort Colors [↗](https://leetcode.com/problems/sort-colors/) | Array, Two Pointers, Sorting, Quicksort | 70.3% | ⏳ |
@@ -150,23 +150,27 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 
 ## By topic
 
-- **Array** (10): [78. Subsets](Subsets/) · [46. Permutations](Permutations/) · [48. Rotate Image](RotateImage/) · [39. Combination Sum](CombinationSum/) · [59. Spiral Matrix II](SpiralMatrixII/) · [49. Group Anagrams](GroupAnagrams/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/)
-- **Backtracking** (6): [78. Subsets](Subsets/) · [46. Permutations](Permutations/) · [22. Generate Parentheses](GenerateParentheses/) · [39. Combination Sum](CombinationSum/) · [77. Combinations](Combinations/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/)
-- **Binary Search Tree** (1): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/)
-- **Bit Manipulation** (1): [78. Subsets](Subsets/)
-- **Depth-First Search** (1): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/)
+- **Array** (13): [78. Subsets](Subsets/) · [46. Permutations](Permutations/) · [48. Rotate Image](RotateImage/) · [39. Combination Sum](CombinationSum/) · [59. Spiral Matrix II](SpiralMatrixII/) · [695. Max Area of Island](MaxAreaOfIsland/) · [49. Group Anagrams](GroupAnagrams/) · [289. Game of Life](GameOfLife/) · [122. Best Time to Buy and Sell Stock II](BestTimeToBuyAndSellStockII/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/)
+- **Backtracking** (7): [78. Subsets](Subsets/) · [46. Permutations](Permutations/) · [22. Generate Parentheses](GenerateParentheses/) · [39. Combination Sum](CombinationSum/) · [77. Combinations](Combinations/) · [131. Palindrome Partitioning](PalindromePartitioning/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/)
+- **Binary Search** (1): [222. Count Complete Tree Nodes](CountCompleteTreeNodes/)
+- **Binary Search Tree** (2): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/) · [235. Lowest Common Ancestor of a Binary Search Tree](LowestCommonAncestorOfABinarySearchTree/)
+- **Binary Tree** (1): [102. Binary Tree Level Order Traversal](BinaryTreeLevelOrderTraversal/)
+- **Bit Manipulation** (2): [78. Subsets](Subsets/) · [222. Count Complete Tree Nodes](CountCompleteTreeNodes/)
+- **Breadth-First Search** (3): [695. Max Area of Island](MaxAreaOfIsland/) · [102. Binary Tree Level Order Traversal](BinaryTreeLevelOrderTraversal/) · [199. Binary Tree Right Side View](BinaryTreeRightSideView/)
+- **Depth-First Search** (4): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/) · [695. Max Area of Island](MaxAreaOfIsland/) · [235. Lowest Common Ancestor of a Binary Search Tree](LowestCommonAncestorOfABinarySearchTree/) · [199. Binary Tree Right Side View](BinaryTreeRightSideView/)
 - **Design** (1): [173. Binary Search Tree Iterator](BinarySearchTreeIterator/)
 - **Divide and Conquer** (1): [347. Top K Frequent Elements](TopKFrequentElements/)
-- **Dynamic Programming** (2): [22. Generate Parentheses](GenerateParentheses/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
+- **Dynamic Programming** (5): [22. Generate Parentheses](GenerateParentheses/) · [131. Palindrome Partitioning](PalindromePartitioning/) · [647. Palindromic Substrings](PalindromicSubstrings/) · [122. Best Time to Buy and Sell Stock II](BestTimeToBuyAndSellStockII/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
+- **Greedy** (1): [122. Best Time to Buy and Sell Stock II](BestTimeToBuyAndSellStockII/)
 - **Hash Table** (6): [763. Partition Labels](PartitionLabels/) · [49. Group Anagrams](GroupAnagrams/) · [12. Integer to Roman](IntegerToRoman/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/)
-- **Linked List** (1): [2. Add Two Numbers](AddTwoNumbers/)
+- **Linked List** (2): [114. Flatten Binary Tree to Linked List](FlattenBinaryTreeToLinkedList/) · [2. Add Two Numbers](AddTwoNumbers/)
 - **Math** (4): [48. Rotate Image](RotateImage/) · [12. Integer to Roman](IntegerToRoman/) · [2. Add Two Numbers](AddTwoNumbers/) · [7. Reverse Integer](ReverseInteger/)
-- **Matrix** (2): [48. Rotate Image](RotateImage/) · [59. Spiral Matrix II](SpiralMatrixII/)
+- **Matrix** (3): [48. Rotate Image](RotateImage/) · [59. Spiral Matrix II](SpiralMatrixII/) · [289. Game of Life](GameOfLife/)
 - **Recursion** (1): [2. Add Two Numbers](AddTwoNumbers/)
-- **Simulation** (1): [59. Spiral Matrix II](SpiralMatrixII/)
+- **Simulation** (2): [59. Spiral Matrix II](SpiralMatrixII/) · [289. Game of Life](GameOfLife/)
 - **Sliding Window** (1): [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/)
 - **Sorting** (3): [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/)
-- **Stack** (1): [173. Binary Search Tree Iterator](BinarySearchTreeIterator/)
-- **String** (8): [763. Partition Labels](PartitionLabels/) · [22. Generate Parentheses](GenerateParentheses/) · [49. Group Anagrams](GroupAnagrams/) · [12. Integer to Roman](IntegerToRoman/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/) · [8. String to Integer (atoi)](StringToIntegerAtoi/)
-- **Tree** (2): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/) · [173. Binary Search Tree Iterator](BinarySearchTreeIterator/)
-- **Two Pointers** (5): [763. Partition Labels](PartitionLabels/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
+- **Stack** (2): [173. Binary Search Tree Iterator](BinarySearchTreeIterator/) · [114. Flatten Binary Tree to Linked List](FlattenBinaryTreeToLinkedList/)
+- **String** (10): [763. Partition Labels](PartitionLabels/) · [22. Generate Parentheses](GenerateParentheses/) · [131. Palindrome Partitioning](PalindromePartitioning/) · [49. Group Anagrams](GroupAnagrams/) · [647. Palindromic Substrings](PalindromicSubstrings/) · [12. Integer to Roman](IntegerToRoman/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/) · [8. String to Integer (atoi)](StringToIntegerAtoi/)
+- **Tree** (7): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/) · [173. Binary Search Tree Iterator](BinarySearchTreeIterator/) · [102. Binary Tree Level Order Traversal](BinaryTreeLevelOrderTraversal/) · [222. Count Complete Tree Nodes](CountCompleteTreeNodes/) · [114. Flatten Binary Tree to Linked List](FlattenBinaryTreeToLinkedList/) · [235. Lowest Common Ancestor of a Binary Search Tree](LowestCommonAncestorOfABinarySearchTree/) · [199. Binary Tree Right Side View](BinaryTreeRightSideView/)
+- **Two Pointers** (6): [763. Partition Labels](PartitionLabels/) · [647. Palindromic Substrings](PalindromicSubstrings/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
