@@ -1,20 +1,20 @@
-# Hard — 3 / 115 solved
+# Hard — 13 / 115 solved
 
 Ordered from easiest to hardest (by LeetCode acceptance rate). Each solved problem has its own folder with
 the statement, a detailed explanation with diagrams (`README.md`), several approaches (`*.java`) and tests.
 
 | Order | # | Problem | Topics | Acceptance | Status · approaches |
 |---|---|---|---|---|---|
-| 1 | 1028 | Recover a Tree From Preorder Traversal [↗](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | String, Tree, Depth-First Search, Binary Tree | 83.2% | ⏳ |
-| 2 | 980 | Unique Paths III [↗](https://leetcode.com/problems/unique-paths-iii/) | Array, Backtracking, Bit Manipulation, Matrix | 83.0% | ⏳ |
-| 3 | 52 | N-Queens II [↗](https://leetcode.com/problems/n-queens-ii/) | Backtracking, Algorithm X | 79.5% | ⏳ |
-| 4 | 51 | N-Queens [↗](https://leetcode.com/problems/n-queens/) | Array, Backtracking, Algorithm X | 76.7% | ⏳ |
-| 5 | 773 | Sliding Puzzle [↗](https://leetcode.com/problems/sliding-puzzle/) | Array, Dynamic Programming, Backtracking, Breadth-First Search | 74.7% | ⏳ |
-| 6 | 1074 | Number of Submatrices That Sum to Target [↗](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | Array, Hash Table, Matrix, Prefix Sum | 74.7% | ⏳ |
-| 7 | 1312 | Minimum Insertion Steps to Make a String Palindrome [↗](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/) | String, Dynamic Programming | 74.6% | ⏳ |
-| 8 | 632 | Smallest Range Covering Elements from K Lists [↗](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | Array, Hash Table, Greedy, Sliding Window | 70.4% | ⏳ |
-| 9 | 1579 | Remove Max Number of Edges to Keep Graph Fully Traversable [↗](https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) | Union-Find, Graph Theory | 70.1% | ⏳ |
-| 10 | 992 | Subarrays with K Different Integers [↗](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Array, Hash Table, Sliding Window, Counting | 69.2% | ⏳ |
+| 1 | 1028 | [Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/) [↗](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | String, Tree, Depth-First Search, Binary Tree | 83.2% | ✅ Iterative with a stack of the current path · Recursive descent |
+| 2 | 980 | [Unique Paths III](UniquePathsIII/) [↗](https://leetcode.com/problems/unique-paths-iii/) | Array, Backtracking, Bit Manipulation, Matrix | 83.0% | ✅ Backtracking over empty cells · Bitmask DP |
+| 3 | 52 | [N-Queens II](NQueensII/) [↗](https://leetcode.com/problems/n-queens-ii/) | Backtracking, Algorithm X | 79.5% | ✅ Backtracking with boolean arrays · Backtracking with bitmasks |
+| 4 | 51 | [N-Queens](NQueens/) [↗](https://leetcode.com/problems/n-queens/) | Array, Backtracking, Algorithm X | 76.7% | ✅ Backtracking with column/diagonal sets · Backtracking with bitmasks |
+| 5 | 773 | [Sliding Puzzle](SlidingPuzzle/) [↗](https://leetcode.com/problems/sliding-puzzle/) | Array, Dynamic Programming, Backtracking, Breadth-First Search | 74.7% | ✅ BFS over board states · A* with Manhattan distance |
+| 6 | 1074 | [Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) [↗](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | Array, Hash Table, Matrix, Prefix Sum | 74.7% | ✅ Brute force with 2D prefix sums · Fix two rows + subarray-sum hash map |
+| 7 | 1312 | [Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) [↗](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/) | String, Dynamic Programming | 74.6% | ✅ Interval DP · n - longest palindromic subsequence |
+| 8 | 632 | [Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) [↗](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | Array, Hash Table, Greedy, Sliding Window | 70.4% | ✅ Min-heap of one pointer per list · Merge all + sliding window |
+| 9 | 1579 | [Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/) [↗](https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) | Union-Find, Graph Theory | 70.1% | ✅ Union-find, shared edges first |
+| 10 | 992 | [Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/) [↗](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Array, Hash Table, Sliding Window, Counting | 69.2% | ✅ Brute force with a set · atMost(k) - atMost(k - 1) with sliding windows |
 | 11 | 42 | [Trapping Rain Water](TrappingRainWater/) [↗](https://leetcode.com/problems/trapping-rain-water/) | Array, Two Pointers, Dynamic Programming, Stack | 68.5% | ✅ Brute force · Prefix max · Monotonic stack · Two pointers |
 | 12 | 778 | Swim in Rising Water [↗](https://leetcode.com/problems/swim-in-rising-water/) | Array, Binary Search, Depth-First Search, Breadth-First Search | 68.4% | ⏳ |
 | 13 | 1406 | Stone Game III [↗](https://leetcode.com/problems/stone-game-iii/) | Array, Math, Dynamic Programming, Minimax | 68.0% | ⏳ |
@@ -123,10 +123,21 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 
 ## By topic
 
-- **Array** (2): [42. Trapping Rain Water](TrappingRainWater/) · [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
+- **Algorithm X** (2): [52. N-Queens II](NQueensII/) · [51. N-Queens](NQueens/)
+- **Array** (8): [980. Unique Paths III](UniquePathsIII/) · [51. N-Queens](NQueens/) · [773. Sliding Puzzle](SlidingPuzzle/) · [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) · [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/) · [42. Trapping Rain Water](TrappingRainWater/) · [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
+- **Backtracking** (4): [980. Unique Paths III](UniquePathsIII/) · [52. N-Queens II](NQueensII/) · [51. N-Queens](NQueens/) · [773. Sliding Puzzle](SlidingPuzzle/)
 - **Binary Search** (1): [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
+- **Bit Manipulation** (1): [980. Unique Paths III](UniquePathsIII/)
+- **Depth-First Search** (1): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/)
 - **Divide and Conquer** (1): [4. Median of Two Sorted Arrays](MedianOfTwoSortedArrays/)
-- **Dynamic Programming** (2): [42. Trapping Rain Water](TrappingRainWater/) · [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Dynamic Programming** (4): [773. Sliding Puzzle](SlidingPuzzle/) · [1312. Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) · [42. Trapping Rain Water](TrappingRainWater/) · [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Graph Theory** (1): [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/)
+- **Greedy** (1): [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/)
+- **Hash Table** (3): [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/) · [632. Smallest Range Covering Elements from K Lists](SmallestRangeCoveringElementsFromKLists/) · [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/)
+- **Matrix** (1): [1074. Number of Submatrices That Sum to Target](NumberOfSubmatricesThatSumToTarget/)
 - **Recursion** (1): [10. Regular Expression Matching](RegularExpressionMatching/)
-- **String** (1): [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Sliding Window** (1): [992. Subarrays with K Different Integers](SubarraysWithKDifferentIntegers/)
+- **String** (3): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/) · [1312. Minimum Insertion Steps to Make a String Palindrome](MinimumInsertionStepsToMakeAStringPalindrome/) · [10. Regular Expression Matching](RegularExpressionMatching/)
+- **Tree** (1): [1028. Recover a Tree From Preorder Traversal](RecoverATreeFromPreorderTraversal/)
 - **Two Pointers** (1): [42. Trapping Rain Water](TrappingRainWater/)
+- **Union-Find** (1): [1579. Remove Max Number of Edges to Keep Graph Fully Traversable](RemoveMaxNumberOfEdgesToKeepGraphFullyTraversable/)
