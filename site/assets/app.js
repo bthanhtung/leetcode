@@ -42,8 +42,8 @@
     app.innerHTML = `
       <section class="hero">
         <div>
-          <h1>Thuật toán, nhìn thấy từng bước</h1>
-          <p>${problems.length} bài LeetCode, mỗi bài có đề, ý tưởng, các cách giải và code Java đã kiểm thử. ${Viz.slugs().length} bài có mô phỏng: đổi dữ liệu vào và xem thuật toán chạy.</p>
+          <h1>Make LeetCode easy.</h1>
+          <p>Xem từng bước thuật toán chạy để hiểu vì sao nó đúng, chứ không học thuộc lời giải. ${problems.length} bài LeetCode giải thích bằng tiếng Việt, code Java đã kiểm thử, ${Viz.slugs().length} bài có mô phỏng tự sửa được dữ liệu. Rèn tư duy logic mỗi ngày, tự tin hơn khi phỏng vấn ở các công ty công nghệ lớn.</p>
         </div>
         <div class="stats">
           <div class="stat easy"><b>${count("Easy")}</b><span>Easy</span></div>
