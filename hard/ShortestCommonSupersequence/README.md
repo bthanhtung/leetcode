@@ -1,5 +1,5 @@
 <!-- approaches: LCS table + walk back · DP storing whole strings -->
-# 1092. Shortest Common Supersequence 
+# 1092. Shortest Common Supersequence
 
 **Hard** · String · Dynamic Programming · Longest Common Subsequence · [LeetCode ↗](https://leetcode.com/problems/shortest-common-supersequence/) · Code: [ShortestCommonSupersequence.java](ShortestCommonSupersequence.java) · Tests: [ShortestCommonSupersequenceTest.java](ShortestCommonSupersequenceTest.java)
 
