@@ -1,32 +1,32 @@
-# Easy — 22 / 127 solved
+# Easy — 42 / 127 solved
 
 Ordered from easiest to hardest (by LeetCode acceptance rate). Each solved problem has its own folder with
 the statement, a detailed explanation with diagrams (`README.md`), several approaches (`*.java`) and tests.
 
 | Order | # | Problem | Topics | Acceptance | Status · approaches |
 |---|---|---|---|---|---|
-| 1 | 1108 | Defanging an IP Address [↗](https://leetcode.com/problems/defanging-an-ip-address/) | String | 90.2% | ⏳ |
-| 2 | 1512 | Number of Good Pairs [↗](https://leetcode.com/problems/number-of-good-pairs/) | Array, Hash Table, Math, Counting | 90.0% | ⏳ |
-| 3 | 771 | Jewels and Stones [↗](https://leetcode.com/problems/jewels-and-stones/) | Hash Table, String | 89.7% | ⏳ |
-| 4 | 1672 | Richest Customer Wealth [↗](https://leetcode.com/problems/richest-customer-wealth/) | Array, Matrix | 88.9% | ⏳ |
-| 5 | 938 | Range Sum of BST [↗](https://leetcode.com/problems/range-sum-of-bst/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 87.7% | ⏳ |
-| 6 | 1480 | Running Sum of 1d Array [↗](https://leetcode.com/problems/running-sum-of-1d-array/) | Array, Prefix Sum | 87.1% | ⏳ |
-| 7 | 557 | Reverse Words in a String III [↗](https://leetcode.com/problems/reverse-words-in-a-string-iii/) | Two Pointers, String | 84.2% | ⏳ |
-| 8 | 700 | Search in a Binary Search Tree [↗](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Tree, Binary Search Tree, Binary Tree | 83.3% | ⏳ |
-| 9 | 876 | Middle of the Linked List [↗](https://leetcode.com/problems/middle-of-the-linked-list/) | Linked List, Two Pointers | 82.5% | ⏳ |
-| 10 | 1290 | Convert Binary Number in a Linked List to Integer [↗](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Linked List, Math | 82.5% | ⏳ |
+| 1 | 1108 | [Defanging an IP Address](DefangingAnIPAddress/) [↗](https://leetcode.com/problems/defanging-an-ip-address/) | String | 90.2% | ✅ String replace · StringBuilder |
+| 2 | 1512 | [Number of Good Pairs](NumberOfGoodPairs/) [↗](https://leetcode.com/problems/number-of-good-pairs/) | Array, Hash Table, Math, Counting | 90.0% | ✅ Brute force · Count while scanning · Combinatorics |
+| 3 | 771 | [Jewels and Stones](JewelsAndStones/) [↗](https://leetcode.com/problems/jewels-and-stones/) | Hash Table, String | 89.7% | ✅ Nested scan · Hash set · Boolean table |
+| 4 | 1672 | [Richest Customer Wealth](RichestCustomerWealth/) [↗](https://leetcode.com/problems/richest-customer-wealth/) | Array, Matrix | 88.9% | ✅ Nested loops · Streams |
+| 5 | 938 | [Range Sum of BST](RangeSumOfBST/) [↗](https://leetcode.com/problems/range-sum-of-bst/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 87.7% | ✅ DFS with pruning · Iterative stack · Inorder |
+| 6 | 1480 | [Running Sum of 1d Array](RunningSumOf1dArray/) [↗](https://leetcode.com/problems/running-sum-of-1d-array/) | Array, Prefix Sum | 87.1% | ✅ New array · In place |
+| 7 | 557 | [Reverse Words in a String III](ReverseWordsInAStringIII/) [↗](https://leetcode.com/problems/reverse-words-in-a-string-iii/) | Two Pointers, String | 84.2% | ✅ Split + reverse · Two pointers on char array |
+| 8 | 700 | [Search in a Binary Search Tree](SearchInABinarySearchTree/) [↗](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Tree, Binary Search Tree, Binary Tree | 83.3% | ✅ Recursive · Iterative |
+| 9 | 876 | [Middle of the Linked List](MiddleOfTheLinkedList/) [↗](https://leetcode.com/problems/middle-of-the-linked-list/) | Linked List, Two Pointers | 82.5% | ✅ Count then walk · Array of nodes · Slow/fast pointers |
+| 10 | 1290 | [Convert Binary Number in a Linked List to Integer](ConvertBinaryNumberInALinkedListToInteger/) [↗](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Linked List, Math | 82.5% | ✅ Shift and add · Collect then parse |
 | 11 | 561 | Array Partition [↗](https://leetcode.com/problems/array-partition/) | Array, Greedy, Sorting, Counting Sort | 82.3% | ⏳ |
-| 12 | 1768 | Merge Strings Alternately [↗](https://leetcode.com/problems/merge-strings-alternately/) | Two Pointers, String | 82.1% | ⏳ |
-| 13 | 344 | Reverse String [↗](https://leetcode.com/problems/reverse-string/) | Two Pointers, String | 81.5% | ⏳ |
-| 14 | 206 | Reverse Linked List [↗](https://leetcode.com/problems/reverse-linked-list/) | Linked List, Recursion | 81.2% | ⏳ |
-| 15 | 94 | Binary Tree Inorder Traversal [↗](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 80.8% | ⏳ |
-| 16 | 338 | Counting Bits [↗](https://leetcode.com/problems/counting-bits/) | Dynamic Programming, Bit Manipulation | 80.8% | ⏳ |
-| 17 | 226 | Invert Binary Tree [↗](https://leetcode.com/problems/invert-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 80.6% | ⏳ |
+| 12 | 1768 | [Merge Strings Alternately](MergeStringsAlternately/) [↗](https://leetcode.com/problems/merge-strings-alternately/) | Two Pointers, String | 82.1% | ✅ Two pointers · Single index |
+| 13 | 344 | [Reverse String](ReverseString/) [↗](https://leetcode.com/problems/reverse-string/) | Two Pointers, String | 81.5% | ✅ Two pointers · Recursion |
+| 14 | 206 | [Reverse Linked List](ReverseLinkedList/) [↗](https://leetcode.com/problems/reverse-linked-list/) | Linked List, Recursion | 81.2% | ✅ Iterative three pointers · Recursive · Stack |
+| 15 | 94 | [Binary Tree Inorder Traversal](BinaryTreeInorderTraversal/) [↗](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 80.8% | ✅ Recursive · Iterative stack · Morris |
+| 16 | 338 | [Counting Bits](CountingBits/) [↗](https://leetcode.com/problems/counting-bits/) | Dynamic Programming, Bit Manipulation | 80.8% | ✅ Count each number · DP with i >> 1 · DP with i & (i - 1) |
+| 17 | 226 | [Invert Binary Tree](InvertBinaryTree/) [↗](https://leetcode.com/problems/invert-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 80.6% | ✅ Recursive DFS · BFS queue |
 | 18 | 118 | [Pascal's Triangle](PascalsTriangle/) [↗](https://leetcode.com/problems/pascals-triangle/) | Array, Dynamic Programming | 79.5% | ✅ Row from previous row · Binomial coefficients |
-| 19 | 145 | Binary Tree Postorder Traversal [↗](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 79.2% | ⏳ |
-| 20 | 617 | Merge Two Binary Trees [↗](https://leetcode.com/problems/merge-two-binary-trees/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 79.2% | ⏳ |
-| 21 | 1207 | Unique Number of Occurrences [↗](https://leetcode.com/problems/unique-number-of-occurrences/) | Array, Hash Table | 79.0% | ⏳ |
-| 22 | 104 | Maximum Depth of Binary Tree [↗](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 78.7% | ⏳ |
+| 19 | 145 | [Binary Tree Postorder Traversal](BinaryTreePostorderTraversal/) [↗](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 79.2% | ✅ Recursive · Reversed modified preorder · One stack with last-visited |
+| 20 | 617 | [Merge Two Binary Trees](MergeTwoBinaryTrees/) [↗](https://leetcode.com/problems/merge-two-binary-trees/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 79.2% | ✅ Recursive in place · Recursive new tree · Iterative stack |
+| 21 | 1207 | [Unique Number of Occurrences](UniqueNumberOfOccurrences/) [↗](https://leetcode.com/problems/unique-number-of-occurrences/) | Array, Hash Table | 79.0% | ✅ Hash map + set · Counting array + seen table |
+| 22 | 104 | [Maximum Depth of Binary Tree](MaximumDepthOfBinaryTree/) [↗](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 78.7% | ✅ Recursive DFS · BFS by levels · Iterative DFS with depth |
 | 23 | 136 | [Single Number](SingleNumber/) [↗](https://leetcode.com/problems/single-number/) | Array, Bit Manipulation | 78.5% | ✅ Hash set toggle · Math (2·sum distinct − sum) · XOR |
 | 24 | 349 | Intersection of Two Arrays [↗](https://leetcode.com/problems/intersection-of-two-arrays/) | Array, Hash Table, Two Pointers, Binary Search | 78.5% | ⏳ |
 | 25 | 657 | Robot Return to Origin [↗](https://leetcode.com/problems/robot-return-to-origin/) | String, Simulation | 78.2% | ⏳ |
@@ -135,22 +135,29 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 
 ## By topic
 
-- **Array** (11): [118. Pascal's Triangle](PascalsTriangle/) · [136. Single Number](SingleNumber/) · [1408. String Matching in an Array](StringMatchingInAnArray/) · [217. Contains Duplicate](ContainsDuplicate/) · [27. Remove Element](RemoveElement/) · [1. Two Sum](TwoSum/) · [121. Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) · [35. Search Insert Position](SearchInsertPosition/) · [219. Contains Duplicate II](ContainsDuplicateII/) · [66. Plus One](PlusOne/) · [14. Longest Common Prefix](LongestCommonPrefix/)
+- **Array** (15): [1512. Number of Good Pairs](NumberOfGoodPairs/) · [1672. Richest Customer Wealth](RichestCustomerWealth/) · [1480. Running Sum of 1d Array](RunningSumOf1dArray/) · [118. Pascal's Triangle](PascalsTriangle/) · [1207. Unique Number of Occurrences](UniqueNumberOfOccurrences/) · [136. Single Number](SingleNumber/) · [1408. String Matching in an Array](StringMatchingInAnArray/) · [217. Contains Duplicate](ContainsDuplicate/) · [27. Remove Element](RemoveElement/) · [1. Two Sum](TwoSum/) · [121. Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) · [35. Search Insert Position](SearchInsertPosition/) · [219. Contains Duplicate II](ContainsDuplicateII/) · [66. Plus One](PlusOne/) · [14. Longest Common Prefix](LongestCommonPrefix/)
 - **Binary Search** (2): [35. Search Insert Position](SearchInsertPosition/) · [69. Sqrt(x)](SqrtX/)
-- **Bit Manipulation** (1): [136. Single Number](SingleNumber/)
+- **Binary Search Tree** (2): [938. Range Sum of BST](RangeSumOfBST/) · [700. Search in a Binary Search Tree](SearchInABinarySearchTree/)
+- **Binary Tree** (1): [700. Search in a Binary Search Tree](SearchInABinarySearchTree/)
+- **Bit Manipulation** (2): [338. Counting Bits](CountingBits/) · [136. Single Number](SingleNumber/)
 - **Bracket Sequences** (1): [20. Valid Parentheses](ValidParentheses/)
+- **Breadth-First Search** (3): [226. Invert Binary Tree](InvertBinaryTree/) · [617. Merge Two Binary Trees](MergeTwoBinaryTrees/) · [104. Maximum Depth of Binary Tree](MaximumDepthOfBinaryTree/)
 - **Counting** (1): [383. Ransom Note](RansomNote/)
-- **Dynamic Programming** (3): [118. Pascal's Triangle](PascalsTriangle/) · [121. Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) · [70. Climbing Stairs](ClimbingStairs/)
-- **Hash Table** (6): [13. Roman to Integer](RomanToInteger/) · [383. Ransom Note](RansomNote/) · [217. Contains Duplicate](ContainsDuplicate/) · [202. Happy Number](HappyNumber/) · [1. Two Sum](TwoSum/) · [219. Contains Duplicate II](ContainsDuplicateII/)
-- **Linked List** (2): [21. Merge Two Sorted Lists](MergeTwoSortedLists/) · [83. Remove Duplicates from Sorted List](RemoveDuplicatesFromSortedList/)
-- **Math** (6): [13. Roman to Integer](RomanToInteger/) · [9. Palindrome Number](PalindromeNumber/) · [202. Happy Number](HappyNumber/) · [70. Climbing Stairs](ClimbingStairs/) · [66. Plus One](PlusOne/) · [69. Sqrt(x)](SqrtX/)
+- **Depth-First Search** (6): [938. Range Sum of BST](RangeSumOfBST/) · [94. Binary Tree Inorder Traversal](BinaryTreeInorderTraversal/) · [226. Invert Binary Tree](InvertBinaryTree/) · [145. Binary Tree Postorder Traversal](BinaryTreePostorderTraversal/) · [617. Merge Two Binary Trees](MergeTwoBinaryTrees/) · [104. Maximum Depth of Binary Tree](MaximumDepthOfBinaryTree/)
+- **Dynamic Programming** (4): [338. Counting Bits](CountingBits/) · [118. Pascal's Triangle](PascalsTriangle/) · [121. Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) · [70. Climbing Stairs](ClimbingStairs/)
+- **Hash Table** (9): [1512. Number of Good Pairs](NumberOfGoodPairs/) · [771. Jewels and Stones](JewelsAndStones/) · [1207. Unique Number of Occurrences](UniqueNumberOfOccurrences/) · [13. Roman to Integer](RomanToInteger/) · [383. Ransom Note](RansomNote/) · [217. Contains Duplicate](ContainsDuplicate/) · [202. Happy Number](HappyNumber/) · [1. Two Sum](TwoSum/) · [219. Contains Duplicate II](ContainsDuplicateII/)
+- **Linked List** (5): [876. Middle of the Linked List](MiddleOfTheLinkedList/) · [1290. Convert Binary Number in a Linked List to Integer](ConvertBinaryNumberInALinkedListToInteger/) · [206. Reverse Linked List](ReverseLinkedList/) · [21. Merge Two Sorted Lists](MergeTwoSortedLists/) · [83. Remove Duplicates from Sorted List](RemoveDuplicatesFromSortedList/)
+- **Math** (8): [1512. Number of Good Pairs](NumberOfGoodPairs/) · [1290. Convert Binary Number in a Linked List to Integer](ConvertBinaryNumberInALinkedListToInteger/) · [13. Roman to Integer](RomanToInteger/) · [9. Palindrome Number](PalindromeNumber/) · [202. Happy Number](HappyNumber/) · [70. Climbing Stairs](ClimbingStairs/) · [66. Plus One](PlusOne/) · [69. Sqrt(x)](SqrtX/)
+- **Matrix** (1): [1672. Richest Customer Wealth](RichestCustomerWealth/)
 - **Memoization** (1): [70. Climbing Stairs](ClimbingStairs/)
 - **Newton's Method** (1): [69. Sqrt(x)](SqrtX/)
-- **Recursion** (1): [21. Merge Two Sorted Lists](MergeTwoSortedLists/)
+- **Prefix Sum** (1): [1480. Running Sum of 1d Array](RunningSumOf1dArray/)
+- **Recursion** (2): [206. Reverse Linked List](ReverseLinkedList/) · [21. Merge Two Sorted Lists](MergeTwoSortedLists/)
 - **Sliding Window** (1): [219. Contains Duplicate II](ContainsDuplicateII/)
 - **Sorting** (1): [217. Contains Duplicate](ContainsDuplicate/)
-- **Stack** (1): [20. Valid Parentheses](ValidParentheses/)
-- **String** (7): [1408. String Matching in an Array](StringMatchingInAnArray/) · [13. Roman to Integer](RomanToInteger/) · [383. Ransom Note](RansomNote/) · [58. Length of Last Word](LengthOfLastWord/) · [125. Valid Palindrome](ValidPalindrome/) · [14. Longest Common Prefix](LongestCommonPrefix/) · [20. Valid Parentheses](ValidParentheses/)
+- **Stack** (3): [94. Binary Tree Inorder Traversal](BinaryTreeInorderTraversal/) · [145. Binary Tree Postorder Traversal](BinaryTreePostorderTraversal/) · [20. Valid Parentheses](ValidParentheses/)
+- **String** (12): [1108. Defanging an IP Address](DefangingAnIPAddress/) · [771. Jewels and Stones](JewelsAndStones/) · [557. Reverse Words in a String III](ReverseWordsInAStringIII/) · [1768. Merge Strings Alternately](MergeStringsAlternately/) · [344. Reverse String](ReverseString/) · [1408. String Matching in an Array](StringMatchingInAnArray/) · [13. Roman to Integer](RomanToInteger/) · [383. Ransom Note](RansomNote/) · [58. Length of Last Word](LengthOfLastWord/) · [125. Valid Palindrome](ValidPalindrome/) · [14. Longest Common Prefix](LongestCommonPrefix/) · [20. Valid Parentheses](ValidParentheses/)
 - **String Matching** (1): [1408. String Matching in an Array](StringMatchingInAnArray/)
+- **Tree** (7): [938. Range Sum of BST](RangeSumOfBST/) · [700. Search in a Binary Search Tree](SearchInABinarySearchTree/) · [94. Binary Tree Inorder Traversal](BinaryTreeInorderTraversal/) · [226. Invert Binary Tree](InvertBinaryTree/) · [145. Binary Tree Postorder Traversal](BinaryTreePostorderTraversal/) · [617. Merge Two Binary Trees](MergeTwoBinaryTrees/) · [104. Maximum Depth of Binary Tree](MaximumDepthOfBinaryTree/)
 - **Trie** (1): [14. Longest Common Prefix](LongestCommonPrefix/)
-- **Two Pointers** (3): [27. Remove Element](RemoveElement/) · [202. Happy Number](HappyNumber/) · [125. Valid Palindrome](ValidPalindrome/)
+- **Two Pointers** (7): [557. Reverse Words in a String III](ReverseWordsInAStringIII/) · [876. Middle of the Linked List](MiddleOfTheLinkedList/) · [1768. Merge Strings Alternately](MergeStringsAlternately/) · [344. Reverse String](ReverseString/) · [27. Remove Element](RemoveElement/) · [202. Happy Number](HappyNumber/) · [125. Valid Palindrome](ValidPalindrome/)
