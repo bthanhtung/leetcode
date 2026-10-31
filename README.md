@@ -11,7 +11,7 @@ Interview-focused LeetCode problems, ordered from easiest to hardest inside each
 <!-- progress:start -->
 | Level | Solved | Planned | Progress |
 |---|---|---|---|
-| [Easy](easy/) | 82 | 127 | `██████░░░░` |
+| [Easy](easy/) | 104 | 127 | `████████░░` |
 | [Medium](medium/) | 12 | 142 | `█░░░░░░░░░` |
 | [Hard](hard/) | 3 | 115 | `░░░░░░░░░░` |
 <!-- progress:end -->
