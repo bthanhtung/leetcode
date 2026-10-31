@@ -13,7 +13,7 @@ Interview-focused LeetCode problems, ordered from easiest to hardest inside each
 |---|---|---|---|
 | [Easy](easy/) | 127 | 127 | `██████████` |
 | [Medium](medium/) | 142 | 142 | `██████████` |
-| [Hard](hard/) | 108 | 115 | `█████████░` |
+| [Hard](hard/) | 115 | 115 | `██████████` |
 <!-- progress:end -->
 
 The problem list is the union of the classic interview sets (Blind 75, NeetCode 150, LeetCode Top Interview 150)
