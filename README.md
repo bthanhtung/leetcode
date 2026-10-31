@@ -40,8 +40,8 @@ easy/ medium/ hard/
 └── TwoSum/
     ├── README.md        statement, idea, diagrams, every approach explained, pitfalls, related problems
     ├── TwoSum.java      one method per approach, main() to try it
-    └── TwoSumTest.java  JUnit 5 tests
-common/                               ListNode, TreeNode shared by linked-list and tree problems
+    ├── TwoSumTest.java  JUnit 5 tests
+    └── ListNode.java / TreeNode.java  only in linked-list and tree problems, so every folder runs on its own
 scripts/                              problem list (problems.json) and the index generator
 ```
 

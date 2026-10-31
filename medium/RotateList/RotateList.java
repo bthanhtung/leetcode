@@ -1,7 +1,5 @@
 package RotateList;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 61. Rotate List — https://leetcode.com/problems/rotate-list/
  * Rotate the linked list to the right by k places.

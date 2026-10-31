@@ -1,7 +1,5 @@
 package MergeTwoSortedLists;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 21. Merge Two Sorted Lists — https://leetcode.com/problems/merge-two-sorted-lists/
  * Merge two sorted linked lists into one sorted list made by splicing together the nodes of the two lists. Return its head.

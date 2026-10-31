@@ -1,7 +1,5 @@
 package SwapNodesInPairs;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 24. Swap Nodes in Pairs — https://leetcode.com/problems/swap-nodes-in-pairs/
  * Swap every two adjacent nodes of a linked list and return its head. Change nodes, not values.

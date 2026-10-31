@@ -1,7 +1,5 @@
 package ReverseLinkedList;
 
-import com.tungdadev.common.ListNode;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 

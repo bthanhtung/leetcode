@@ -1,7 +1,5 @@
 package LowestCommonAncestorOfABinarySearchTree;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 235. Lowest Common Ancestor of a Binary Search Tree — https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * Given a BST and two of its nodes p and q, return their lowest common ancestor (a node may be its own ancestor).

@@ -1,7 +1,5 @@
 package SubtreeOfAnotherTree;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 572. Subtree of Another Tree — https://leetcode.com/problems/subtree-of-another-tree/
  * Return true if subRoot is a subtree of root: some node of root together with all its descendants equals subRoot.

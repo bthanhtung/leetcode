@@ -1,7 +1,5 @@
 package SearchInABinarySearchTree;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 700. Search in a Binary Search Tree — https://leetcode.com/problems/search-in-a-binary-search-tree/
  * Given the root of a BST and a value, return the subtree rooted at the node with that value, or null.

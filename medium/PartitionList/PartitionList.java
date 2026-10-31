@@ -1,7 +1,5 @@
 package PartitionList;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 86. Partition List — https://leetcode.com/problems/partition-list/
  * Rearrange the list so all nodes with value < x come before nodes with value >= x, keeping the original relative

@@ -1,7 +1,5 @@
 package SortList;
 
-import com.tungdadev.common.ListNode;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -1,7 +1,5 @@
 package DiameterOfBinaryTree;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 543. Diameter of Binary Tree — https://leetcode.com/problems/diameter-of-binary-tree/
  * The diameter is the number of edges on the longest path between any two nodes (it may not pass the root).

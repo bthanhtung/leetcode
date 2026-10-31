@@ -18,7 +18,7 @@ dependencies {
 sourceSets {
     main {
         java {
-            srcDirs = ["common", "easy", "medium", "hard"]
+            srcDirs = ["easy", "medium", "hard"]
             exclude "**/*Test.java"
         }
     }

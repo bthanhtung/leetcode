@@ -1,7 +1,5 @@
 package MiddleOfTheLinkedList;
 
-import com.tungdadev.common.ListNode;
-
 import java.util.ArrayList;
 import java.util.List;
 

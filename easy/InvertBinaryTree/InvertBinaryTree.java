@@ -1,7 +1,5 @@
 package InvertBinaryTree;
 
-import com.tungdadev.common.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
 

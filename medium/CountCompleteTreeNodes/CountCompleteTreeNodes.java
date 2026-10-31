@@ -1,7 +1,5 @@
 package CountCompleteTreeNodes;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 222. Count Complete Tree Nodes — https://leetcode.com/problems/count-complete-tree-nodes/
  * Count the nodes of a complete binary tree (every level full except possibly the last, filled from the left).

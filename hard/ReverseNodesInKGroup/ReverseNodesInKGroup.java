@@ -1,7 +1,5 @@
 package ReverseNodesInKGroup;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 25. Reverse Nodes in k-Group — https://leetcode.com/problems/reverse-nodes-in-k-group/
  * Reverse the nodes of a linked list k at a time; a final group with fewer than k nodes stays as it is.

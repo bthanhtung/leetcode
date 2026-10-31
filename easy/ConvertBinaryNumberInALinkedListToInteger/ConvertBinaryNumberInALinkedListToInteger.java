@@ -1,7 +1,5 @@
 package ConvertBinaryNumberInALinkedListToInteger;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 1290. Convert Binary Number in a Linked List to Integer — https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
  * A linked list holds the bits of a binary number, most significant bit first. Return its decimal value.

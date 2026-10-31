@@ -1,6 +1,5 @@
 package FlattenBinaryTreeToLinkedList;
 
-import com.tungdadev.common.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

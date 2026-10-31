@@ -1,7 +1,5 @@
 package RemoveLinkedListElements;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 203. Remove Linked List Elements — https://leetcode.com/problems/remove-linked-list-elements/
  * Remove all nodes whose value equals val and return the new head.

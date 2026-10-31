@@ -1,7 +1,5 @@
 package BinaryTreeMaximumPathSum;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 124. Binary Tree Maximum Path Sum — https://leetcode.com/problems/binary-tree-maximum-path-sum/
  * A path is any sequence of adjacent nodes, each used at most once (it need not pass the root). Return the maximum sum

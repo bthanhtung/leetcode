@@ -1,7 +1,5 @@
 package LinkedListCycleII;
 
-import com.tungdadev.common.ListNode;
-
 import java.util.HashSet;
 import java.util.Set;
 

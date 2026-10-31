@@ -1,7 +1,5 @@
 package RemoveNthNodeFromEndOfList;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 19. Remove Nth Node From End of List — https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * Remove the n-th node from the end of the list and return its head. Follow up: one pass.

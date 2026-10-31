@@ -1,4 +1,4 @@
-package com.tungdadev.common;
+package PathSum;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

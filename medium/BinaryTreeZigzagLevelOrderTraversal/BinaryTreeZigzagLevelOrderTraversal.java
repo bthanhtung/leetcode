@@ -1,7 +1,5 @@
 package BinaryTreeZigzagLevelOrderTraversal;
 
-import com.tungdadev.common.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;

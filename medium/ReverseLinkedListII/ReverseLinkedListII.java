@@ -1,7 +1,5 @@
 package ReverseLinkedListII;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 92. Reverse Linked List II — https://leetcode.com/problems/reverse-linked-list-ii/
  * Reverse the nodes from position left to position right (1-indexed) and return the list. Follow up: one pass.

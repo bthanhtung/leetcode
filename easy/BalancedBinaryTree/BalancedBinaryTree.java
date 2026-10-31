@@ -1,7 +1,5 @@
 package BalancedBinaryTree;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 110. Balanced Binary Tree — https://leetcode.com/problems/balanced-binary-tree/
  * A binary tree is height-balanced if the two subtrees of every node differ in height by at most one.

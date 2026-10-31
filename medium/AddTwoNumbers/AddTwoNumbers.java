@@ -1,7 +1,5 @@
 package AddTwoNumbers;
 
-import com.tungdadev.common.ListNode;
-
 /*
  * 2. Add Two Numbers — https://leetcode.com/problems/add-two-numbers/
  * Two non-negative integers are stored as linked lists with digits in reverse order (ones digit first). Return their sum

@@ -1,7 +1,5 @@
 package BinaryTreeCameras;
 
-import com.tungdadev.common.TreeNode;
-
 /*
  * 968. Binary Tree Cameras — https://leetcode.com/problems/binary-tree-cameras/
  * Install cameras on tree nodes; a camera monitors its parent, itself and its children. Return the minimum number of
