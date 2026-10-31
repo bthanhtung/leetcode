@@ -14,6 +14,36 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+// Problems live at the top level, one folder each: easy/TwoSum/{TwoSum.java, TwoSumTest.java, README.md}
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src/main/java", "easy", "medium", "hard"]
+            exclude "**/*Test.java"
+        }
+    }
+    test {
+        java {
+            srcDirs = ["src/test/java", "easy", "medium", "hard"]
+            include "**/*Test.java"
+        }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
+
 tasks.test {
     useJUnitPlatform()
+    testLogging {
+        events "failed"
+        exceptionFormat "full"
+    }
 }

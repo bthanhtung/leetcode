@@ -1,0 +1,156 @@
+# Easy — 22 / 127 solved
+
+Ordered from easiest to hardest (by LeetCode acceptance rate). Each solved problem has its own folder with
+the statement, a detailed explanation with diagrams (`README.md`), several approaches (`*.java`) and tests.
+
+| Order | # | Problem | Topics | Acceptance | Status · approaches |
+|---|---|---|---|---|---|
+| 1 | 1108 | Defanging an IP Address [↗](https://leetcode.com/problems/defanging-an-ip-address/) | String | 90.2% | ⏳ |
+| 2 | 1512 | Number of Good Pairs [↗](https://leetcode.com/problems/number-of-good-pairs/) | Array, Hash Table, Math, Counting | 90.0% | ⏳ |
+| 3 | 771 | Jewels and Stones [↗](https://leetcode.com/problems/jewels-and-stones/) | Hash Table, String | 89.7% | ⏳ |
+| 4 | 1672 | Richest Customer Wealth [↗](https://leetcode.com/problems/richest-customer-wealth/) | Array, Matrix | 88.9% | ⏳ |
+| 5 | 938 | Range Sum of BST [↗](https://leetcode.com/problems/range-sum-of-bst/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 87.7% | ⏳ |
+| 6 | 1480 | Running Sum of 1d Array [↗](https://leetcode.com/problems/running-sum-of-1d-array/) | Array, Prefix Sum | 87.1% | ⏳ |
+| 7 | 557 | Reverse Words in a String III [↗](https://leetcode.com/problems/reverse-words-in-a-string-iii/) | Two Pointers, String | 84.2% | ⏳ |
+| 8 | 700 | Search in a Binary Search Tree [↗](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Tree, Binary Search Tree, Binary Tree | 83.3% | ⏳ |
+| 9 | 876 | Middle of the Linked List [↗](https://leetcode.com/problems/middle-of-the-linked-list/) | Linked List, Two Pointers | 82.5% | ⏳ |
+| 10 | 1290 | Convert Binary Number in a Linked List to Integer [↗](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Linked List, Math | 82.5% | ⏳ |
+| 11 | 561 | Array Partition [↗](https://leetcode.com/problems/array-partition/) | Array, Greedy, Sorting, Counting Sort | 82.3% | ⏳ |
+| 12 | 1768 | Merge Strings Alternately [↗](https://leetcode.com/problems/merge-strings-alternately/) | Two Pointers, String | 82.1% | ⏳ |
+| 13 | 344 | Reverse String [↗](https://leetcode.com/problems/reverse-string/) | Two Pointers, String | 81.5% | ⏳ |
+| 14 | 206 | Reverse Linked List [↗](https://leetcode.com/problems/reverse-linked-list/) | Linked List, Recursion | 81.2% | ⏳ |
+| 15 | 94 | Binary Tree Inorder Traversal [↗](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 80.8% | ⏳ |
+| 16 | 338 | Counting Bits [↗](https://leetcode.com/problems/counting-bits/) | Dynamic Programming, Bit Manipulation | 80.8% | ⏳ |
+| 17 | 226 | Invert Binary Tree [↗](https://leetcode.com/problems/invert-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 80.6% | ⏳ |
+| 18 | 118 | [Pascal's Triangle](PascalsTriangle/) [↗](https://leetcode.com/problems/pascals-triangle/) | Array, Dynamic Programming | 79.5% | ✅ Row from previous row · Binomial coefficients |
+| 19 | 145 | Binary Tree Postorder Traversal [↗](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 79.2% | ⏳ |
+| 20 | 617 | Merge Two Binary Trees [↗](https://leetcode.com/problems/merge-two-binary-trees/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 79.2% | ⏳ |
+| 21 | 1207 | Unique Number of Occurrences [↗](https://leetcode.com/problems/unique-number-of-occurrences/) | Array, Hash Table | 79.0% | ⏳ |
+| 22 | 104 | Maximum Depth of Binary Tree [↗](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 78.7% | ⏳ |
+| 23 | 136 | [Single Number](SingleNumber/) [↗](https://leetcode.com/problems/single-number/) | Array, Bit Manipulation | 78.5% | ✅ Hash set toggle · Math (2·sum distinct − sum) · XOR |
+| 24 | 349 | Intersection of Two Arrays [↗](https://leetcode.com/problems/intersection-of-two-arrays/) | Array, Hash Table, Two Pointers, Binary Search | 78.5% | ⏳ |
+| 25 | 657 | Robot Return to Origin [↗](https://leetcode.com/problems/robot-return-to-origin/) | String, Simulation | 78.2% | ⏳ |
+| 26 | 191 | Number of 1 Bits [↗](https://leetcode.com/problems/number-of-1-bits/) | Divide and Conquer, Bit Manipulation | 77.8% | ⏳ |
+| 27 | 867 | Transpose Matrix [↗](https://leetcode.com/problems/transpose-matrix/) | Array, Matrix, Simulation | 77.5% | ⏳ |
+| 28 | 461 | Hamming Distance [↗](https://leetcode.com/problems/hamming-distance/) | Bit Manipulation | 77.2% | ⏳ |
+| 29 | 589 | N-ary Tree Preorder Traversal [↗](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | Stack, Tree, Depth-First Search | 77.1% | ⏳ |
+| 30 | 496 | Next Greater Element I [↗](https://leetcode.com/problems/next-greater-element-i/) | Array, Hash Table, Stack, Monotonic Stack | 77.0% | ⏳ |
+| 31 | 144 | Binary Tree Preorder Traversal [↗](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Stack, Tree, Depth-First Search, Binary Tree | 76.9% | ⏳ |
+| 32 | 905 | Sort Array By Parity [↗](https://leetcode.com/problems/sort-array-by-parity/) | Array, Two Pointers, Sorting | 76.7% | ⏳ |
+| 33 | 108 | Convert Sorted Array to Binary Search Tree [↗](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Array, Divide and Conquer, Tree, Binary Search Tree | 76.3% | ⏳ |
+| 34 | 412 | Fizz Buzz [↗](https://leetcode.com/problems/fizz-buzz/) | Math, String, Simulation | 76.0% | ⏳ |
+| 35 | 509 | Fibonacci Number [↗](https://leetcode.com/problems/fibonacci-number/) | Math, Dynamic Programming, Recursion, Memoization | 74.8% | ⏳ |
+| 36 | 500 | Keyboard Row [↗](https://leetcode.com/problems/keyboard-row/) | Array, Hash Table, String | 74.6% | ⏳ |
+| 37 | 463 | Island Perimeter [↗](https://leetcode.com/problems/island-perimeter/) | Array, Depth-First Search, Breadth-First Search, Matrix | 74.5% | ⏳ |
+| 38 | 977 | Squares of a Sorted Array [↗](https://leetcode.com/problems/squares-of-a-sorted-array/) | Array, Two Pointers, Sorting | 74.2% | ⏳ |
+| 39 | 303 | Range Sum Query - Immutable [↗](https://leetcode.com/problems/range-sum-query-immutable/) | Array, Design, Prefix Sum | 73.8% | ⏳ |
+| 40 | 268 | Missing Number [↗](https://leetcode.com/problems/missing-number/) | Array, Hash Table, Math, Binary Search | 72.9% | ⏳ |
+| 41 | 476 | Number Complement [↗](https://leetcode.com/problems/number-complement/) | Bit Manipulation | 70.6% | ⏳ |
+| 42 | 225 | Implement Stack using Queues [↗](https://leetcode.com/problems/implement-stack-using-queues/) | Stack, Design, Queue | 70.5% | ⏳ |
+| 43 | 232 | Implement Queue using Stacks [↗](https://leetcode.com/problems/implement-queue-using-stacks/) | Stack, Design, Queue | 70.3% | ⏳ |
+| 44 | 1408 | [String Matching in an Array](StringMatchingInAnArray/) [↗](https://leetcode.com/problems/string-matching-in-an-array/) | Array, String, String Matching | 69.9% | ✅ All pairs · Sort by length · Joined text |
+| 45 | 190 | Reverse Bits [↗](https://leetcode.com/problems/reverse-bits/) | Divide and Conquer, Bit Manipulation | 69.7% | ⏳ |
+| 46 | 257 | Binary Tree Paths [↗](https://leetcode.com/problems/binary-tree-paths/) | String, Backtracking, Tree, Depth-First Search | 69.6% | ⏳ |
+| 47 | 258 | Add Digits [↗](https://leetcode.com/problems/add-digits/) | Math, Simulation, Number Theory | 69.4% | ⏳ |
+| 48 | 21 | [Merge Two Sorted Lists](MergeTwoSortedLists/) [↗](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List, Recursion | 69.0% | ✅ Iterative with dummy head · Recursive |
+| 49 | 746 | Min Cost Climbing Stairs [↗](https://leetcode.com/problems/min-cost-climbing-stairs/) | Array, Dynamic Programming | 68.9% | ⏳ |
+| 50 | 242 | Valid Anagram [↗](https://leetcode.com/problems/valid-anagram/) | Hash Table, String, Sorting | 68.8% | ⏳ |
+| 51 | 171 | Excel Sheet Column Number [↗](https://leetcode.com/problems/excel-sheet-column-number/) | Math, String | 68.6% | ⏳ |
+| 52 | 705 | Design HashSet [↗](https://leetcode.com/problems/design-hashset/) | Array, Hash Table, Linked List, Design | 68.5% | ⏳ |
+| 53 | 100 | Same Tree [↗](https://leetcode.com/problems/same-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 68.2% | ⏳ |
+| 54 | 119 | Pascal's Triangle II [↗](https://leetcode.com/problems/pascals-triangle-ii/) | Array, Dynamic Programming | 68.2% | ⏳ |
+| 55 | 13 | [Roman to Integer](RomanToInteger/) [↗](https://leetcode.com/problems/roman-to-integer/) | Hash Table, Math, String | 67.3% | ✅ Look ahead · Right to left · Pair table |
+| 56 | 1046 | Last Stone Weight [↗](https://leetcode.com/problems/last-stone-weight/) | Array, Heap (Priority Queue) | 66.9% | ⏳ |
+| 57 | 706 | Design HashMap [↗](https://leetcode.com/problems/design-hashmap/) | Array, Hash Table, Linked List, Design | 66.8% | ⏳ |
+| 58 | 383 | [Ransom Note](RansomNote/) [↗](https://leetcode.com/problems/ransom-note/) | Hash Table, String, Counting | 66.6% | ✅ Remove from copy · Hash map count · Array of 26 |
+| 59 | 387 | First Unique Character in a String [↗](https://leetcode.com/problems/first-unique-character-in-a-string/) | Hash Table, String, Queue, Counting | 66.6% | ⏳ |
+| 60 | 169 | Majority Element [↗](https://leetcode.com/problems/majority-element/) | Array, Hash Table, Divide and Conquer, Sorting | 66.5% | ⏳ |
+| 61 | 485 | Max Consecutive Ones [↗](https://leetcode.com/problems/max-consecutive-ones/) | Array | 66.4% | ⏳ |
+| 62 | 543 | Diameter of Binary Tree [↗](https://leetcode.com/problems/diameter-of-binary-tree/) | Tree, Depth-First Search, Binary Tree, DP on Trees | 66.4% | ⏳ |
+| 63 | 160 | Intersection of Two Linked Lists [↗](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Hash Table, Linked List, Two Pointers | 64.9% | ⏳ |
+| 64 | 217 | [Contains Duplicate](ContainsDuplicate/) [↗](https://leetcode.com/problems/contains-duplicate/) | Array, Hash Table, Sorting | 64.8% | ✅ Brute force · Sort · Hash set |
+| 65 | 448 | Find All Numbers Disappeared in an Array [↗](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Array, Hash Table | 64.7% | ⏳ |
+| 66 | 283 | Move Zeroes [↗](https://leetcode.com/problems/move-zeroes/) | Array, Two Pointers | 64.5% | ⏳ |
+| 67 | 724 | Find Pivot Index [↗](https://leetcode.com/problems/find-pivot-index/) | Array, Prefix Sum | 64.2% | ⏳ |
+| 68 | 26 | Remove Duplicates from Sorted Array [↗](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Array, Two Pointers | 64.0% | ⏳ |
+| 69 | 404 | Sum of Left Leaves [↗](https://leetcode.com/problems/sum-of-left-leaves/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 63.3% | ⏳ |
+| 70 | 896 | Monotonic Array [↗](https://leetcode.com/problems/monotonic-array/) | Array | 62.8% | ⏳ |
+| 71 | 27 | [Remove Element](RemoveElement/) [↗](https://leetcode.com/problems/remove-element/) | Array, Two Pointers | 62.7% | ✅ Read/write pointers · Swap with last |
+| 72 | 345 | Reverse Vowels of a String [↗](https://leetcode.com/problems/reverse-vowels-of-a-string/) | Two Pointers, String | 62.7% | ⏳ |
+| 73 | 101 | Symmetric Tree [↗](https://leetcode.com/problems/symmetric-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 62.2% | ⏳ |
+| 74 | 703 | Kth Largest Element in a Stream [↗](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Tree, Design, Binary Search Tree, Heap (Priority Queue) | 61.7% | ⏳ |
+| 75 | 704 | Binary Search [↗](https://leetcode.com/problems/binary-search/) | Array, Binary Search | 61.4% | ⏳ |
+| 76 | 9 | [Palindrome Number](PalindromeNumber/) [↗](https://leetcode.com/problems/palindrome-number/) | Math | 61.1% | ✅ String reverse · Full number reverse · Half reverse |
+| 77 | 389 | Find the Difference [↗](https://leetcode.com/problems/find-the-difference/) | Hash Table, String, Bit Manipulation, Sorting | 60.8% | ⏳ |
+| 78 | 292 | Nim Game [↗](https://leetcode.com/problems/nim-game/) | Math, Brainteaser, Minimax, Game Theory | 60.7% | ⏳ |
+| 79 | 202 | [Happy Number](HappyNumber/) [↗](https://leetcode.com/problems/happy-number/) | Hash Table, Math, Two Pointers, Floyd's Cycle Finding Algorithm | 60.5% | ✅ Hash set · Floyd cycle detection · Known cycle |
+| 80 | 350 | Intersection of Two Arrays II [↗](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | Array, Hash Table, Two Pointers, Binary Search | 60.5% | ⏳ |
+| 81 | 58 | [Length of Last Word](LengthOfLastWord/) [↗](https://leetcode.com/problems/length-of-last-word/) | String | 60.0% | ✅ Split · Trim + lastIndexOf · Scan from the end |
+| 82 | 530 | Minimum Absolute Difference in BST [↗](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | Tree, Depth-First Search, Breadth-First Search, Binary Search Tree | 59.8% | ⏳ |
+| 83 | 110 | Balanced Binary Tree [↗](https://leetcode.com/problems/balanced-binary-tree/) | Tree, Depth-First Search, Binary Tree | 59.4% | ⏳ |
+| 84 | 234 | Palindrome Linked List [↗](https://leetcode.com/problems/palindrome-linked-list/) | Linked List, Two Pointers, Stack, Recursion | 59.0% | ⏳ |
+| 85 | 67 | Add Binary [↗](https://leetcode.com/problems/add-binary/) | Math, String, Bit Manipulation, Simulation | 58.8% | ⏳ |
+| 86 | 374 | Guess Number Higher or Lower [↗](https://leetcode.com/problems/guess-number-higher-or-lower/) | Binary Search, Interactive | 58.6% | ⏳ |
+| 87 | 1 | [Two Sum](TwoSum/) [↗](https://leetcode.com/problems/two-sum/) | Array, Hash Table | 58.1% | ✅ Brute force · Hash map · Sort + two pointers |
+| 88 | 83 | [Remove Duplicates from Sorted List](RemoveDuplicatesFromSortedList/) [↗](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Linked List | 57.8% | ✅ Skip duplicates in place · Recursive |
+| 89 | 121 | [Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) [↗](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array, Dynamic Programming | 57.5% | ✅ Brute force · One pass · State-machine DP |
+| 90 | 520 | Detect Capital [↗](https://leetcode.com/problems/detect-capital/) | String | 57.2% | ⏳ |
+| 91 | 409 | Longest Palindrome [↗](https://leetcode.com/problems/longest-palindrome/) | Hash Table, String, Greedy | 56.3% | ⏳ |
+| 92 | 112 | Path Sum [↗](https://leetcode.com/problems/path-sum/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 56.0% | ⏳ |
+| 93 | 88 | Merge Sorted Array [↗](https://leetcode.com/problems/merge-sorted-array/) | Array, Two Pointers, Sorting | 55.9% | ⏳ |
+| 94 | 203 | Remove Linked List Elements [↗](https://leetcode.com/problems/remove-linked-list-elements/) | Linked List, Recursion | 55.8% | ⏳ |
+| 95 | 455 | Assign Cookies [↗](https://leetcode.com/problems/assign-cookies/) | Array, Two Pointers, Greedy, Sorting | 55.6% | ⏳ |
+| 96 | 141 | Linked List Cycle [↗](https://leetcode.com/problems/linked-list-cycle/) | Hash Table, Linked List, Two Pointers, Floyd's Cycle Finding Algorithm | 55.3% | ⏳ |
+| 97 | 405 | Convert a Number to Hexadecimal [↗](https://leetcode.com/problems/convert-a-number-to-hexadecimal/) | Math, String, Bit Manipulation | 55.2% | ⏳ |
+| 98 | 228 | Summary Ranges [↗](https://leetcode.com/problems/summary-ranges/) | Array | 54.9% | ⏳ |
+| 99 | 125 | [Valid Palindrome](ValidPalindrome/) [↗](https://leetcode.com/problems/valid-palindrome/) | Two Pointers, String | 54.6% | ✅ Clean + reverse · Two pointers |
+| 100 | 70 | [Climbing Stairs](ClimbingStairs/) [↗](https://leetcode.com/problems/climbing-stairs/) | Math, Dynamic Programming, Memoization | 54.4% | ✅ Recursion · Memoization · DP table · Two variables |
+| 101 | 111 | Minimum Depth of Binary Tree [↗](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 54.0% | ⏳ |
+| 102 | 35 | [Search Insert Position](SearchInsertPosition/) [↗](https://leetcode.com/problems/search-insert-position/) | Array, Binary Search | 52.5% | ✅ Linear scan · Binary search (lower bound) · Arrays.binarySearch |
+| 103 | 572 | Subtree of Another Tree [↗](https://leetcode.com/problems/subtree-of-another-tree/) | Tree, Depth-First Search, String Matching, Binary Tree | 52.4% | ⏳ |
+| 104 | 415 | Add Strings [↗](https://leetcode.com/problems/add-strings/) | Math, String, Simulation | 52.3% | ⏳ |
+| 105 | 219 | [Contains Duplicate II](ContainsDuplicateII/) [↗](https://leetcode.com/problems/contains-duplicate-ii/) | Array, Hash Table, Sliding Window | 52.1% | ✅ Brute force · Last index map · Sliding window set |
+| 106 | 326 | Power of Three [↗](https://leetcode.com/problems/power-of-three/) | Math, Recursion | 51.8% | ⏳ |
+| 107 | 66 | [Plus One](PlusOne/) [↗](https://leetcode.com/problems/plus-one/) | Array, Math | 50.8% | ✅ Stop at first non-9 · General carry · BigInteger |
+| 108 | 231 | Power of Two [↗](https://leetcode.com/problems/power-of-two/) | Math, Bit Manipulation, Recursion | 50.7% | ⏳ |
+| 109 | 844 | Backspace String Compare [↗](https://leetcode.com/problems/backspace-string-compare/) | Two Pointers, String, Stack, Simulation | 50.3% | ⏳ |
+| 110 | 392 | Is Subsequence [↗](https://leetcode.com/problems/is-subsequence/) | Two Pointers, String, Dynamic Programming | 49.5% | ⏳ |
+| 111 | 643 | Maximum Average Subarray I [↗](https://leetcode.com/problems/maximum-average-subarray-i/) | Array, Sliding Window | 49.5% | ⏳ |
+| 112 | 205 | Isomorphic Strings [↗](https://leetcode.com/problems/isomorphic-strings/) | Hash Table, String | 49.3% | ⏳ |
+| 113 | 459 | Repeated Substring Pattern [↗](https://leetcode.com/problems/repeated-substring-pattern/) | String, String Matching, Z Algorithm, Knuth–Morris–Pratt Algorithm | 49.0% | ⏳ |
+| 114 | 14 | [Longest Common Prefix](LongestCommonPrefix/) [↗](https://leetcode.com/problems/longest-common-prefix/) | Array, String, Trie | 48.6% | ✅ Vertical scan · Horizontal shrink · Sort + compare ends |
+| 115 | 628 | Maximum Product of Three Numbers [↗](https://leetcode.com/problems/maximum-product-of-three-numbers/) | Array, Math, Sorting | 48.3% | ⏳ |
+| 116 | 168 | Excel Sheet Column Title [↗](https://leetcode.com/problems/excel-sheet-column-title/) | Math, String | 47.9% | ⏳ |
+| 117 | 278 | First Bad Version [↗](https://leetcode.com/problems/first-bad-version/) | Binary Search, Interactive | 47.8% | ⏳ |
+| 118 | 28 | Find the Index of the First Occurrence in a String [↗](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Two Pointers, String, String Matching, Z Algorithm | 47.5% | ⏳ |
+| 119 | 20 | [Valid Parentheses](ValidParentheses/) [↗](https://leetcode.com/problems/valid-parentheses/) | String, Stack, Bracket Sequences | 45.4% | ✅ Stack · Expected-closer stack · Repeated removal |
+| 120 | 367 | Valid Perfect Square [↗](https://leetcode.com/problems/valid-perfect-square/) | Math, Binary Search | 45.1% | ⏳ |
+| 121 | 680 | Valid Palindrome II [↗](https://leetcode.com/problems/valid-palindrome-ii/) | Two Pointers, String, Greedy | 45.0% | ⏳ |
+| 122 | 290 | Word Pattern [↗](https://leetcode.com/problems/word-pattern/) | Hash Table, String | 44.8% | ⏳ |
+| 123 | 263 | Ugly Number [↗](https://leetcode.com/problems/ugly-number/) | Math | 44.4% | ⏳ |
+| 124 | 645 | Set Mismatch [↗](https://leetcode.com/problems/set-mismatch/) | Array, Hash Table, Bit Manipulation, Sorting | 43.2% | ⏳ |
+| 125 | 69 | [Sqrt(x)](SqrtX/) [↗](https://leetcode.com/problems/sqrtx/) | Math, Binary Search, Newton's Method | 42.4% | ✅ Linear · Binary search · Newton's method |
+| 126 | 414 | Third Maximum Number [↗](https://leetcode.com/problems/third-maximum-number/) | Array, Sorting | 40.7% | ⏳ |
+| 127 | 434 | Number of Segments in a String [↗](https://leetcode.com/problems/number-of-segments-in-a-string/) | String | 38.0% | ⏳ |
+
+## By topic
+
+- **Array** (11): [118. Pascal's Triangle](PascalsTriangle/) · [136. Single Number](SingleNumber/) · [1408. String Matching in an Array](StringMatchingInAnArray/) · [217. Contains Duplicate](ContainsDuplicate/) · [27. Remove Element](RemoveElement/) · [1. Two Sum](TwoSum/) · [121. Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) · [35. Search Insert Position](SearchInsertPosition/) · [219. Contains Duplicate II](ContainsDuplicateII/) · [66. Plus One](PlusOne/) · [14. Longest Common Prefix](LongestCommonPrefix/)
+- **Binary Search** (2): [35. Search Insert Position](SearchInsertPosition/) · [69. Sqrt(x)](SqrtX/)
+- **Bit Manipulation** (1): [136. Single Number](SingleNumber/)
+- **Bracket Sequences** (1): [20. Valid Parentheses](ValidParentheses/)
+- **Counting** (1): [383. Ransom Note](RansomNote/)
+- **Dynamic Programming** (3): [118. Pascal's Triangle](PascalsTriangle/) · [121. Best Time to Buy and Sell Stock](BestTimeToBuyAndSellStock/) · [70. Climbing Stairs](ClimbingStairs/)
+- **Hash Table** (6): [13. Roman to Integer](RomanToInteger/) · [383. Ransom Note](RansomNote/) · [217. Contains Duplicate](ContainsDuplicate/) · [202. Happy Number](HappyNumber/) · [1. Two Sum](TwoSum/) · [219. Contains Duplicate II](ContainsDuplicateII/)
+- **Linked List** (2): [21. Merge Two Sorted Lists](MergeTwoSortedLists/) · [83. Remove Duplicates from Sorted List](RemoveDuplicatesFromSortedList/)
+- **Math** (6): [13. Roman to Integer](RomanToInteger/) · [9. Palindrome Number](PalindromeNumber/) · [202. Happy Number](HappyNumber/) · [70. Climbing Stairs](ClimbingStairs/) · [66. Plus One](PlusOne/) · [69. Sqrt(x)](SqrtX/)
+- **Memoization** (1): [70. Climbing Stairs](ClimbingStairs/)
+- **Newton's Method** (1): [69. Sqrt(x)](SqrtX/)
+- **Recursion** (1): [21. Merge Two Sorted Lists](MergeTwoSortedLists/)
+- **Sliding Window** (1): [219. Contains Duplicate II](ContainsDuplicateII/)
+- **Sorting** (1): [217. Contains Duplicate](ContainsDuplicate/)
+- **Stack** (1): [20. Valid Parentheses](ValidParentheses/)
+- **String** (7): [1408. String Matching in an Array](StringMatchingInAnArray/) · [13. Roman to Integer](RomanToInteger/) · [383. Ransom Note](RansomNote/) · [58. Length of Last Word](LengthOfLastWord/) · [125. Valid Palindrome](ValidPalindrome/) · [14. Longest Common Prefix](LongestCommonPrefix/) · [20. Valid Parentheses](ValidParentheses/)
+- **String Matching** (1): [1408. String Matching in an Array](StringMatchingInAnArray/)
+- **Trie** (1): [14. Longest Common Prefix](LongestCommonPrefix/)
+- **Two Pointers** (3): [27. Remove Element](RemoveElement/) · [202. Happy Number](HappyNumber/) · [125. Valid Palindrome](ValidPalindrome/)
