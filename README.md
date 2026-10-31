@@ -12,7 +12,7 @@ Interview-focused LeetCode problems, ordered from easiest to hardest inside each
 | Level | Solved | Planned | Progress |
 |---|---|---|---|
 | [Easy](easy/) | 127 | 127 | `██████████` |
-| [Medium](medium/) | 102 | 142 | `███████░░░` |
+| [Medium](medium/) | 112 | 142 | `████████░░` |
 | [Hard](hard/) | 100 | 115 | `█████████░` |
 <!-- progress:end -->
 
