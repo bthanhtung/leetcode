@@ -1,20 +1,20 @@
-# Medium — 12 / 142 solved
+# Medium — 22 / 142 solved
 
 Ordered from easiest to hardest (by LeetCode acceptance rate). Each solved problem has its own folder with
 the statement, a detailed explanation with diagrams (`README.md`), several approaches (`*.java`) and tests.
 
 | Order | # | Problem | Topics | Acceptance | Status · approaches |
 |---|---|---|---|---|---|
-| 1 | 78 | Subsets [↗](https://leetcode.com/problems/subsets/) | Array, Backtracking, Bit Manipulation | 83.0% | ⏳ |
-| 2 | 46 | Permutations [↗](https://leetcode.com/problems/permutations/) | Array, Backtracking | 82.5% | ⏳ |
-| 3 | 763 | Partition Labels [↗](https://leetcode.com/problems/partition-labels/) | Hash Table, Two Pointers, String, Greedy | 82.1% | ⏳ |
-| 4 | 48 | Rotate Image [↗](https://leetcode.com/problems/rotate-image/) | Array, Math, Matrix | 80.9% | ⏳ |
-| 5 | 22 | Generate Parentheses [↗](https://leetcode.com/problems/generate-parentheses/) | String, Dynamic Programming, Backtracking, Bracket Sequences | 79.7% | ⏳ |
-| 6 | 230 | Kth Smallest Element in a BST [↗](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 77.5% | ⏳ |
-| 7 | 39 | Combination Sum [↗](https://leetcode.com/problems/combination-sum/) | Array, Backtracking | 77.3% | ⏳ |
-| 8 | 173 | Binary Search Tree Iterator [↗](https://leetcode.com/problems/binary-search-tree-iterator/) | Stack, Tree, Design, Binary Search Tree | 77.1% | ⏳ |
-| 9 | 59 | Spiral Matrix II [↗](https://leetcode.com/problems/spiral-matrix-ii/) | Array, Matrix, Simulation | 76.1% | ⏳ |
-| 10 | 77 | Combinations [↗](https://leetcode.com/problems/combinations/) | Backtracking | 75.4% | ⏳ |
+| 1 | 78 | [Subsets](Subsets/) [↗](https://leetcode.com/problems/subsets/) | Array, Backtracking, Bit Manipulation | 83.0% | ✅ Backtracking · Iterative doubling · Bitmask |
+| 2 | 46 | [Permutations](Permutations/) [↗](https://leetcode.com/problems/permutations/) | Array, Backtracking | 82.5% | ✅ Backtracking with used[] · Backtracking by swapping · Insert into every position |
+| 3 | 763 | [Partition Labels](PartitionLabels/) [↗](https://leetcode.com/problems/partition-labels/) | Hash Table, Two Pointers, String, Greedy | 82.1% | ✅ Last occurrence + greedy cut · Merge intervals |
+| 4 | 48 | [Rotate Image](RotateImage/) [↗](https://leetcode.com/problems/rotate-image/) | Array, Math, Matrix | 80.9% | ✅ Extra matrix · Transpose + reverse rows · Rotate four cells at a time |
+| 5 | 22 | [Generate Parentheses](GenerateParentheses/) [↗](https://leetcode.com/problems/generate-parentheses/) | String, Dynamic Programming, Backtracking, Bracket Sequences | 79.7% | ✅ Brute force + validate · Backtracking with open/close counts · DP by first pair |
+| 6 | 230 | [Kth Smallest Element in a BST](KthSmallestElementInABST/) [↗](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 77.5% | ✅ Inorder to list · Iterative inorder with early stop · Subtree sizes |
+| 7 | 39 | [Combination Sum](CombinationSum/) [↗](https://leetcode.com/problems/combination-sum/) | Array, Backtracking | 77.3% | ✅ Backtracking with reuse · Sorted with pruning · DP by target |
+| 8 | 173 | [Binary Search Tree Iterator](BinarySearchTreeIterator/) [↗](https://leetcode.com/problems/binary-search-tree-iterator/) | Stack, Tree, Design, Binary Search Tree | 77.1% | ✅ Flatten with inorder · Controlled recursion with a stack |
+| 9 | 59 | [Spiral Matrix II](SpiralMatrixII/) [↗](https://leetcode.com/problems/spiral-matrix-ii/) | Array, Matrix, Simulation | 76.1% | ✅ Shrinking boundaries · Direction vectors |
+| 10 | 77 | [Combinations](Combinations/) [↗](https://leetcode.com/problems/combinations/) | Backtracking | 75.4% | ✅ Backtracking · Backtracking with pruning · Iterative (lexicographic) |
 | 11 | 131 | Palindrome Partitioning [↗](https://leetcode.com/problems/palindrome-partitioning/) | String, Dynamic Programming, Backtracking | 74.8% | ⏳ |
 | 12 | 695 | Max Area of Island [↗](https://leetcode.com/problems/max-area-of-island/) | Array, Depth-First Search, Breadth-First Search, Union-Find | 74.3% | ⏳ |
 | 13 | 102 | Binary Tree Level Order Traversal [↗](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Tree, Breadth-First Search, Binary Tree | 73.7% | ⏳ |
@@ -150,15 +150,23 @@ the statement, a detailed explanation with diagrams (`README.md`), several appro
 
 ## By topic
 
-- **Array** (5): [49. Group Anagrams](GroupAnagrams/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/)
-- **Backtracking** (1): [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/)
+- **Array** (10): [78. Subsets](Subsets/) · [46. Permutations](Permutations/) · [48. Rotate Image](RotateImage/) · [39. Combination Sum](CombinationSum/) · [59. Spiral Matrix II](SpiralMatrixII/) · [49. Group Anagrams](GroupAnagrams/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/)
+- **Backtracking** (6): [78. Subsets](Subsets/) · [46. Permutations](Permutations/) · [22. Generate Parentheses](GenerateParentheses/) · [39. Combination Sum](CombinationSum/) · [77. Combinations](Combinations/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/)
+- **Binary Search Tree** (1): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/)
+- **Bit Manipulation** (1): [78. Subsets](Subsets/)
+- **Depth-First Search** (1): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/)
+- **Design** (1): [173. Binary Search Tree Iterator](BinarySearchTreeIterator/)
 - **Divide and Conquer** (1): [347. Top K Frequent Elements](TopKFrequentElements/)
-- **Dynamic Programming** (1): [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
-- **Hash Table** (5): [49. Group Anagrams](GroupAnagrams/) · [12. Integer to Roman](IntegerToRoman/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/)
+- **Dynamic Programming** (2): [22. Generate Parentheses](GenerateParentheses/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
+- **Hash Table** (6): [763. Partition Labels](PartitionLabels/) · [49. Group Anagrams](GroupAnagrams/) · [12. Integer to Roman](IntegerToRoman/) · [347. Top K Frequent Elements](TopKFrequentElements/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/)
 - **Linked List** (1): [2. Add Two Numbers](AddTwoNumbers/)
-- **Math** (3): [12. Integer to Roman](IntegerToRoman/) · [2. Add Two Numbers](AddTwoNumbers/) · [7. Reverse Integer](ReverseInteger/)
+- **Math** (4): [48. Rotate Image](RotateImage/) · [12. Integer to Roman](IntegerToRoman/) · [2. Add Two Numbers](AddTwoNumbers/) · [7. Reverse Integer](ReverseInteger/)
+- **Matrix** (2): [48. Rotate Image](RotateImage/) · [59. Spiral Matrix II](SpiralMatrixII/)
 - **Recursion** (1): [2. Add Two Numbers](AddTwoNumbers/)
+- **Simulation** (1): [59. Spiral Matrix II](SpiralMatrixII/)
 - **Sliding Window** (1): [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/)
 - **Sorting** (3): [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/)
-- **String** (6): [49. Group Anagrams](GroupAnagrams/) · [12. Integer to Roman](IntegerToRoman/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/) · [8. String to Integer (atoi)](StringToIntegerAtoi/)
-- **Two Pointers** (4): [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
+- **Stack** (1): [173. Binary Search Tree Iterator](BinarySearchTreeIterator/)
+- **String** (8): [763. Partition Labels](PartitionLabels/) · [22. Generate Parentheses](GenerateParentheses/) · [49. Group Anagrams](GroupAnagrams/) · [12. Integer to Roman](IntegerToRoman/) · [17. Letter Combinations of a Phone Number](LetterCombinationsOfAPhoneNumber/) · [3. Longest Substring Without Repeating Characters](LongestSubstringWithoutRepeatingCharacters/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/) · [8. String to Integer (atoi)](StringToIntegerAtoi/)
+- **Tree** (2): [230. Kth Smallest Element in a BST](KthSmallestElementInABST/) · [173. Binary Search Tree Iterator](BinarySearchTreeIterator/)
+- **Two Pointers** (5): [763. Partition Labels](PartitionLabels/) · [16. 3Sum Closest](ThreeSumClosest/) · [18. 4Sum](FourSum/) · [15. 3Sum](ThreeSum/) · [5. Longest Palindromic Substring](LongestPalindromicSubstring/)
