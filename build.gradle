@@ -42,6 +42,7 @@ tasks.withType(JavaCompile).configureEach {
 
 tasks.test {
     useJUnitPlatform()
+    systemProperty "junit.jupiter.execution.timeout.default", "30 s"     // an infinite loop fails one test instead of hanging the build
     testLogging {
         events "failed"
         exceptionFormat "full"
