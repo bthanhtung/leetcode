@@ -8,16 +8,19 @@ Interview-focused LeetCode problems, ordered from easiest to hardest inside each
 
 ## Visualizer
 
-`site/` is a static site that shows every problem (statement, idea, approaches, Java code) and plays step-by-step
-animations for the classic ones. Netlify builds it with `python3 site/build.py` (see `netlify.toml`).
+`site/` is the site behind [algorithm.tungdadev.com](https://algorithm.tungdadev.com): Vite, React, Tailwind and
+shadcn/ui. Every problem has its statement, solution, Java code and a step-by-step simulation with synced pseudo-code,
+variables, a step log and editable input. Netlify builds it (see `netlify.toml`).
 
 ```bash
-python3 site/build.py && python3 -m http.server -d site 8000   # http://localhost:8000
-node site/test-viz.mjs                                          # every animation reaches the expected answer
+python3 site/build.py                 # generates site/public/data from the problem folders
+cd site && npm ci && npm run dev      # http://localhost:5173
+npm test                              # runs every simulation and checks its answer, frames and pseudo-code lines
+npm run build                         # type-check and production build into site/dist
 ```
 
-To animate another problem, register it in `site/assets/viz-array.js` or `viz-structures.js` with a default input and
-the expected result.
+Simulations are plain data with no DOM, in `site/src/viz/`, grouped by technique. `engine.js` documents the frame format.
+To add one, call `register(slug, { input, expect, code, run })`; `npm test -- --missing` lists problems without one.
 
 ## Progress
 

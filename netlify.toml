@@ -1,10 +1,11 @@
-# Static site for the algorithm visualizer (site/). Netlify regenerates site/data from the problem folders.
+# Vite + React site for the algorithm visualizer (site/). site/public/data is generated from the problem folders.
 [build]
-  command = "python3 site/build.py"
-  publish = "site"
+  command = "python3 site/build.py && npm ci --prefix site && npm test --prefix site && npm run build --prefix site"
+  publish = "site/dist"
 
 [build.environment]
   PYTHON_VERSION = "3.11"
+  NODE_VERSION = "22"
 
 [[headers]]
   for = "/data/*"

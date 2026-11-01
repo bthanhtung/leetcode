@@ -3,8 +3,8 @@
 
     python3 site/build.py
 
-Writes site/data/index.json (one entry per solved problem) and site/data/p/<slug>.json (README markdown and the Java
-solution). Run it after adding problems; the generated files are committed so the site needs no build step.
+Writes data/index.json (one entry per solved problem) and data/p/<slug>.json (README markdown and the Java
+solution) into site/public/data, which Vite copies to the output. Generated, not committed: run it before `npm run dev`.
 """
 import json
 import re
@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_index import LEVELS, approaches, folder_name  # noqa: E402
 
-OUT = ROOT / "site" / "data"
+OUT = ROOT / "site" / "public" / "data"
 
 
 def readme_body(text: str) -> str:
@@ -26,6 +26,20 @@ def readme_body(text: str) -> str:
                      or lines[0].startswith("**Hard**")):
         lines.pop(0)
     return "\n".join(lines).strip() + "\n"
+
+
+def split_readme(body: str) -> dict:
+    """Separates the statement and the related-problems line from the rest so the page can lay them out on their own."""
+    parts = re.split(r"^(?=## )", body, flags=re.M)
+    statement, solution, related = "", [], ""
+    for part in parts:
+        if part.startswith("## Đề bài"):
+            statement = part.split("\n", 1)[1].strip()
+        elif part.startswith("## Bài liên quan"):
+            related = part.split("\n", 1)[1].strip()
+        elif part.strip():
+            solution.append(part)
+    return {"statement": statement, "solution": "".join(solution).strip(), "related": related}
 
 
 def main():
@@ -47,7 +61,7 @@ def main():
             "folder": f"{LEVELS[p['level']]}/{name}",
         })
         detail = {
-            "readme": readme_body(readme),
+            **split_readme(readme_body(readme)),
             "java": java.read_text(encoding="utf-8") if java.exists() else "",
         }
         (OUT / "p" / f"{p['slug']}.json").write_text(json.dumps(detail, ensure_ascii=False), encoding="utf-8")
