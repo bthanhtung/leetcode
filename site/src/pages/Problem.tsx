@@ -47,9 +47,35 @@ function Markdown({ source, folder }: { source: string; folder: string }) {
   return <div ref={ref} className="prose prose-sm prose-neutral max-w-none dark:prose-invert prose-pre:bg-muted prose-pre:text-foreground prose-code:before:content-none prose-code:after:content-none prose-table:text-xs prose-blockquote:font-normal prose-blockquote:not-italic" />;
 }
 
+/** Cuts highlighted HTML into lines, closing and reopening spans that cross a line such as a block comment. */
+function htmlLines(html: string) {
+  const open: string[] = [];
+  return html.split("\n").map((line) => {
+    const out = open.join("") + line;
+    for (const [tag] of line.matchAll(/<span[^>]*>|<\/span>/g)) {
+      if (tag === "</span>") open.pop();
+      else open.push(tag);
+    }
+    return out + "</span>".repeat(open.length);
+  });
+}
+
+/** Long lines wrap instead of scrolling; a wrapped line hangs under its own indent so the structure stays readable. */
 function JavaCode({ source }: { source: string }) {
-  const html = useMemo(() => hljs.highlight(source, { language: "java", ignoreIllegals: true }).value, [source]);
-  return <pre className="overflow-x-auto rounded-lg bg-muted p-4 font-mono text-[12.5px] leading-5"><code dangerouslySetInnerHTML={{ __html: html }} /></pre>;
+  const lines = useMemo(() => {
+    const text = source.replace(/\t/g, "    ").replace(/\s+$/, "");
+    const plain = text.split("\n");
+    return htmlLines(hljs.highlight(text, { language: "java", ignoreIllegals: true }).value).map((html, i) => ({ html, indent: Math.min(plain[i].search(/\S|$/), 16) + 2 }));
+  }, [source]);
+  return (
+    <pre className="rounded-lg bg-muted p-4 font-mono text-[12.5px] leading-5">
+      <code className="block">
+        {lines.map(({ html, indent }, i) => (
+          <div key={i} className="min-h-5 break-words whitespace-pre-wrap" style={{ paddingLeft: `${indent}ch`, textIndent: `-${indent}ch` }} dangerouslySetInnerHTML={{ __html: html }} />
+        ))}
+      </code>
+    </pre>
+  );
 }
 
 /** The README's related line: "167 Two Sum II · 15 3Sum · …". Items naming a problem we have become links. */
