@@ -13,7 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import type { Frame, VizApi, VizDef } from "@/hooks/use-viz";
 import { cn } from "@/lib/utils";
-import { Stage } from "./Stage";
+import { FitStage } from "./Stage";
 
 hljs.registerLanguage("java", java);
 
@@ -198,10 +198,10 @@ export function Player({ viz, slug, focus, onFocus }: { viz: VizApi; slug: strin
   const marks = useMemo(() => frames.flatMap((f, i) => (f.key ? [i] : [])), [frames]);
 
   return (
-    <div className="flex h-full min-h-0 flex-col bg-card">
+    <div className="@container flex h-full min-h-0 flex-col bg-card">
       <div className="flex h-11 shrink-0 items-center gap-2 border-b px-3">
         <span className="text-sm font-medium">Mô phỏng</span>
-        <div className="hidden min-w-0 items-center gap-2.5 overflow-hidden pl-2 text-[11px] text-muted-foreground xl:flex">
+        <div className="hidden min-w-0 items-center gap-2.5 overflow-hidden pl-2 text-[11px] text-muted-foreground @3xl:flex">
           {LEGEND.map(([tone, label]) => (
             <span key={tone} className="flex items-center gap-1 whitespace-nowrap"><span data-tone={tone} className="tone-box size-2.5 rounded-[3px]" />{label}</span>
           ))}
@@ -214,29 +214,27 @@ export function Player({ viz, slug, focus, onFocus }: { viz: VizApi; slug: strin
         </div>
       </div>
 
-      <div className="stage-bg relative min-h-[280px] flex-1 overflow-auto p-5">
-        <Stage frame={frame} />
-      </div>
+      <FitStage frame={frame} run={trace} />
 
       <div className="flex min-h-14 shrink-0 items-center gap-3 border-t bg-card px-4 py-2 text-sm">
         <Badge variant="secondary" className="shrink-0 font-mono tabular-nums">{index + 1}/{frames.length}</Badge>
         <div className="min-w-0 leading-snug" aria-live="polite"><Rich text={frame.msg ?? ""} /></div>
         {atEnd && result !== undefined && (
-          <div className="ml-auto max-w-[45%] shrink-0 truncate rounded-md border border-[var(--viz-ok)] bg-[var(--viz-ok-soft)] px-2 py-1 font-mono text-xs" title={fmt(result)}>= {fmt(result)}</div>
+          <div className="ml-auto max-w-[40%] shrink-0 truncate rounded-md border border-[var(--viz-ok)] bg-[var(--viz-ok-soft)] px-2 py-1 font-mono text-xs" title={fmt(result)}>= {fmt(result)}</div>
         )}
       </div>
 
       {frame.vars && (
-        <div className="flex shrink-0 gap-3 overflow-x-auto border-t px-4 py-1.5 font-mono text-xs whitespace-nowrap md:hidden">
+        <div className="flex shrink-0 gap-3 overflow-x-auto border-t px-4 py-1.5 font-mono text-xs whitespace-nowrap @xl:hidden">
           {Object.entries(frame.vars).map(([k, v]) => <span key={k}><span className="text-muted-foreground">{k}</span> {fmt(v)}</span>)}
         </div>
       )}
 
-      <div className="grid h-40 shrink-0 grid-cols-1 border-t md:h-52 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
-        <div className="min-h-0 md:border-r">
+      <div className="grid h-40 shrink-0 grid-cols-1 border-t @xl:h-52 @xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        <div className="min-h-0 @xl:border-r">
           {def.code ? <CodePanel code={def.code} line={frame.line} /> : <div className="p-3 text-sm text-muted-foreground">Chưa có mã giả.</div>}
         </div>
-        <Tabs defaultValue="vars" className="hidden min-h-0 gap-0 md:flex">
+        <Tabs defaultValue="vars" className="hidden min-h-0 gap-0 @xl:flex">
           <TabsList variant="line" className="h-9 w-full shrink-0 justify-start border-b px-2">
             <TabsTrigger value="vars" className="flex-none">Biến</TabsTrigger>
             <TabsTrigger value="log" className="flex-none">Nhật ký</TabsTrigger>

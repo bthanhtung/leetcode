@@ -1,5 +1,5 @@
 /* Draws one frame. Elements keep stable keys between frames so colours and positions animate instead of flickering. */
-import { useId } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import type { Frame } from "@/hooks/use-viz";
 import { cn } from "@/lib/utils";
 
@@ -396,10 +396,71 @@ function PointsView({ p }: { p: Any }) {
 
 const many = (one: unknown, list: unknown): Any[] => [...(one ? [one] : []), ...((list as Any[]) ?? [])];
 
+const MIN_ZOOM = 0.55;
+
+/**
+ * Scales the drawing down to fit its pane, then lets the pane scroll past MIN_ZOOM. During a run the zoom only
+ * shrinks, so the drawing does not pulse as a stack grows and empties; a new run or a resized pane starts over.
+ */
+export function FitStage({ frame, run }: { frame: Frame; run: unknown }) {
+  const outer = useRef<HTMLDivElement>(null);
+  const inner = useRef<HTMLDivElement>(null);
+  const [zoom, setZoom] = useState(1);
+  const zoomRef = useRef(1);
+
+  const fit = useCallback(() => {
+    const o = outer.current, i = inner.current;
+    if (!o || !i) return 1;
+    const style = getComputedStyle(o);
+    const width = o.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+    const height = o.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
+    const box = i.getBoundingClientRect();
+    return Math.max(MIN_ZOOM, Math.min(1, (width * zoomRef.current) / box.width, (height * zoomRef.current) / box.height));
+  }, []);
+
+  const apply = useCallback((value: number) => {
+    zoomRef.current = value;
+    setZoom(value);
+  }, []);
+
+  useLayoutEffect(() => {
+    const next = fit();
+    if (next < zoomRef.current) apply(next);
+  }, [frame, fit, apply]);
+
+  useLayoutEffect(() => {
+    apply(1);
+  }, [run, apply]);
+
+  useEffect(() => {
+    const o = outer.current;
+    if (!o) return;
+    const seen = { width: o.clientWidth, height: o.clientHeight };
+    const observer = new ResizeObserver(() => {
+      if (o.clientWidth === seen.width && o.clientHeight === seen.height) return;
+      seen.width = o.clientWidth;
+      seen.height = o.clientHeight;
+      zoomRef.current = 1;
+      if (inner.current) inner.current.style.zoom = "1";
+      apply(fit());
+    });
+    observer.observe(o);
+    return () => observer.disconnect();
+  }, [fit, apply]);
+
+  return (
+    <div ref={outer} className="stage-bg relative min-h-[240px] flex-1 overflow-auto p-5">
+      <div ref={inner} className="mx-auto w-fit" style={{ zoom }}>
+        <Stage frame={frame} />
+      </div>
+    </div>
+  );
+}
+
 export function Stage({ frame }: { frame: Frame }) {
   const side = [...(frame.stacks ?? []).map((s: Any, i: number) => <StackView key={`s${i}`} s={s} />), ...(frame.maps ?? []).map((m: Any, i: number) => <MapView key={`m${i}`} m={m} />)];
   return (
-    <div className="mx-auto flex w-fit min-w-max flex-col items-center gap-5">
+    <div className="flex w-fit min-w-max flex-col items-center gap-5">
       {(frame.arrays ?? []).map((a: Any, i: number) => <ArrayView key={i} a={a} />)}
       {many(frame.list, frame.lists).map((L, i) => <ListView key={i} L={L} />)}
       {many(frame.tree, frame.trees).length > 0 && <div className="flex flex-wrap gap-8">{many(frame.tree, frame.trees).map((t, i) => <TreeView key={i} t={t} />)}</div>}

@@ -1,7 +1,7 @@
-import { Moon, Search, Sun } from "lucide-react";
+import { ArrowLeft, Moon, Search, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Kbd } from "@/components/ui/kbd";
-import { useRoute } from "@/lib/router";
+import { goBack, useRoute } from "@/lib/router";
 import { useTheme } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -19,11 +19,12 @@ export function Header() {
   const route = useRoute();
   const { theme, toggle } = useTheme();
   const link = (href: string, text: string, on: boolean) => (
-    <a href={`#${href}`} className={cn("rounded-md px-2.5 py-1 text-sm transition-colors hover:text-foreground", on ? "font-medium text-foreground" : "text-muted-foreground")}>{text}</a>
+    <a href={href} className={cn("rounded-md px-2.5 py-1 text-sm transition-colors hover:text-foreground", on ? "font-medium text-foreground" : "text-muted-foreground")}>{text}</a>
   );
   return (
     <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center gap-2 border-b bg-background/85 px-4 backdrop-blur">
-      <a href="#/" className="mr-3 flex items-center gap-2 font-semibold tracking-tight">
+      {route !== "/" && <Button variant="ghost" size="sm" onClick={goBack} aria-label="Quay lại"><ArrowLeft /><span className="hidden md:inline">Quay lại</span></Button>}
+      <a href="/" className="mr-3 flex items-center gap-2 font-semibold tracking-tight">
         <svg viewBox="0 0 32 32" className="size-6" aria-hidden="true">
           <rect width="32" height="32" rx="8" className="fill-foreground" />
           <rect x="6" y="16" width="4" height="10" rx="1" className="fill-background" />

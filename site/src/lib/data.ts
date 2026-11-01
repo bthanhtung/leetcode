@@ -23,7 +23,7 @@ export interface ProblemDetail {
 let cache: Promise<Problem[]> | null = null;
 
 export function loadProblems(): Promise<Problem[]> {
-  cache ??= fetch("data/index.json").then((r) => {
+  cache ??= fetch("/data/index.json").then((r) => {
     if (!r.ok) throw new Error(String(r.status));
     return r.json();
   });

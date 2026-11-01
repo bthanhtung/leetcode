@@ -11,3 +11,9 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
+
+# Clean URLs: every path that is not a real file is served by the app.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

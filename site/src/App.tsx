@@ -14,7 +14,7 @@ export default function App() {
   const { problems, failed } = useProblems();
   useEffect(() => {
     if (!route.startsWith("/p/")) document.title = "Algorithm Visualizer";
-    window.scrollTo(0, 0);
+    if (route !== "/") window.scrollTo(0, 0);
   }, [route]);
 
   let page;
@@ -28,7 +28,7 @@ export default function App() {
     <TooltipProvider delayDuration={250}>
       <div className="flex min-h-dvh flex-col">
         <Header />
-        <main className="flex min-h-0 flex-1 flex-col">{page}</main>
+        <main className="flex min-h-0 flex-1 flex-col"><ErrorBoundary key={route}>{page}</ErrorBoundary></main>
         {problems && <ErrorBoundary><CommandMenu problems={problems} /></ErrorBoundary>}
       </div>
     </TooltipProvider>

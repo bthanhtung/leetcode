@@ -1,5 +1,5 @@
 import { Check, Play, Search, Shuffle, X } from "lucide-react";
-import { useMemo } from "react";
+import { useEffect, useLayoutEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,7 +12,17 @@ import { cn } from "@/lib/utils";
 
 const LEVEL_ORDER = { Easy: 0, Medium: 1, Hard: 2 };
 
+let listScroll = 0;
+
 export function Home({ problems }: { problems: Problem[] }) {
+  useLayoutEffect(() => {
+    window.scrollTo(0, listScroll);
+  }, []);
+  useEffect(() => {
+    const remember = () => { listScroll = window.scrollY; };
+    window.addEventListener("scroll", remember, { passive: true });
+    return () => window.removeEventListener("scroll", remember);
+  }, []);
   const { filters, setFilters } = useFilters();
   const { ids, isLearned, toggle } = useLearned();
   const viz = useViz();
@@ -96,7 +106,7 @@ export function Home({ problems }: { problems: Problem[] }) {
             <button onClick={() => toggle(p.id)} aria-label={isLearned(p.id) ? "Bỏ đánh dấu đã học" : "Đánh dấu đã học"} aria-pressed={isLearned(p.id)} className={cn("flex size-[18px] shrink-0 items-center justify-center rounded-[5px] border transition-colors", isLearned(p.id) ? "border-[var(--viz-ok)] bg-[var(--viz-ok)] text-white" : "opacity-60 hover:opacity-100")}>
               {isLearned(p.id) && <Check className="size-3" strokeWidth={3} />}
             </button>
-            <a href={`#/p/${p.slug}`} className="flex min-w-0 flex-1 items-center gap-3 py-2.5">
+            <a href={`/p/${p.slug}`} className="flex min-w-0 flex-1 items-center gap-3 py-2.5">
               <span className="w-11 shrink-0 font-mono text-xs text-muted-foreground">{p.id}</span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-sm font-medium">{p.title}</span>
